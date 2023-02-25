@@ -1,0 +1,114 @@
+<!doctype html>
+<!-- LCARS: Library Computer Access/Retrieval System -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>LCARS</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="left-top">
+            <a href="index.html">INDEX</a>
+            <div class="meta" tabindex="0">
+                <div class="meta-content">
+                    <b>LAST REVISION</b><br />
+                    Stardate 23152.11<br />
+                    2023 Feb 25 12:30
+                </div>
+            </div>
+        </div>
+        <h1>Stardate Converter</h1>
+        <div id="radius-container">
+            <div id="radius"></div>
+        </div>
+        <div id="bottom"></div>
+        <div id="spacer"></div>
+        <div id="frame">
+            <div id="content">
+                <p>Uses the TNG-era(-onward, incl. DISs3 etc.) stardate system, where 2323 = 0. TOS-era stardates are just sorta random.</p>
+                <p>For some reason, <a href="series/ldx.html">Lower Decks</a> uses a variant on this. I haven't found what the formula is, but in the show it's just a difference of a few months.</p>
+                <h2>Earth &rarr; Stardate</h2>
+                <input type="date" id="date" value="2364-04-05" />
+                <input type="time" id="time" value="12:00:00" step="1" />
+                <button onclick="calc()">Calculate</button>
+                <p id="stardate"></p>
+                <h2>Stardate &rarr; Earth</h2>
+                <input type="number" id="stardate2" value="0" step="any" />
+                <button onclick="uncalc()">Calculate</button>
+                <p id="date2"></p>
+                <script>
+                    function leap(y) {
+                        return y % 4 == 0 && (y % 100 != 0 || y % 400 == 0);
+                    }
+                    function valid(y, m, d) {
+                        if (isNaN(y) || isNaN(m) || isNaN(d)) {
+                            return false;
+                        }
+                        return true;
+                    }
+                    function calc() {
+                        var y = parseInt(document.getElementById("date").value.split("-")[0]);
+                        var m = parseInt(document.getElementById("date").value.split("-")[1]);
+                        var d = parseInt(document.getElementById("date").value.split("-")[2]);
+                        console.log(y, m, d, valid(y, m, d));
+                        if (!valid(y, m, d)) {
+                            document.getElementById("stardate").innerHTML = "invalid date";
+                            return;
+                        }
+                        var h = parseInt(document.getElementById("time").value.split(":")[0]);
+                        var min = parseInt(document.getElementById("time").value.split(":")[1]);
+                        var s = parseInt(document.getElementById("time").value.split(":")[2]);
+                        var ml = [31, 28 + leap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                        var ms /* month starts */ = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+                        var yl = 365 + leap(y);
+                        if (leap(y)) {
+                            for (var i = 2; i < 12; i++) {
+                                ms[i]++;
+                            }
+                        }
+                        var doy = ms[m - 1] + d - 1;
+                        console.log(y, m, d, h, min, s, doy);
+                        var ed = y + (doy + h / 24 + min / 1440 + s / 86400) / yl;
+                        var sd = 1000 * (ed - 2323);
+                        document.getElementById("stardate").innerHTML = sd;
+                    }
+                    function uncalc() {
+                        var sd = parseFloat(document.getElementById("stardate2").value);
+                        var ed = sd / 1000 + 2323;
+                        ed = String(ed) + ".0";
+                        var v = ed.split(".");
+                        var y = parseInt(v[0]);
+                        var f = "0." + v[1];
+                        var yl = 365 + leap(y);
+                        if (f == 0) {
+                            document.getElementById("date2").innerHTML = y + "-01-01 00:00:00";
+                            return;
+                        }
+                        var doy = Math.floor(f * yl) % yl;
+                        var h = Math.floor(f * 24 * yl) % 24;
+                        var min = Math.floor(f * 1440 * yl) % 60;
+                        var s = Math.floor(f * 86400 * yl) % 60;
+                        var ml = [31, 28 + leap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                        var ms = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+                        if (leap(y)) {
+                            for (var i = 2; i < 12; i++) {
+                                ms[i]++;
+                            }
+                        }
+                        var m = 1;
+                        while (ms[m] <= doy) {
+                            m++;
+                        }
+                        var d = doy - ms[m - 1] + 1;
+                        m = String(m).padStart(2, "0");
+                        d = String(d).padStart(2, "0");
+                        h = String(h).padStart(2, "0");
+                        min = String(min).padStart(2, "0");
+                        s = String(s).padStart(2, "0");
+                        document.getElementById("date2").innerHTML = y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s;
+                    }
+                </script>        
+            </div>
+        </div>
+    </body>
+</html>
