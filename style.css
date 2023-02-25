@@ -160,6 +160,7 @@ div#frame {
     padding: 1rem 0 0 8rem;
     background: var(--frame);
     border-radius: 2rem 0 0 0;
+    transition: padding-left 0.25s cubic-bezier(0.23, 1, 0.320, 1);
 }
 div#spacer {
     height: 1em;
@@ -277,4 +278,9 @@ button {
 }
 input:invalid {
     background-color: var(--accentred);
+}
+@media (max-width: 600px) {
+    div#frame {
+        padding-left: 1em;
+    }
 }
