@@ -1,13 +1,14 @@
 :root {
     --bg: #101010;
     --fg: #ffffff;
-    /* do not reuse colors! */
     --accentred: #e5501f;
     --accentblue: #1f8fe5;
+    --accentgreen: #12d799;
     --frame: #3a4755;
     --selfg: #b67be0;
     --selbg: #b67be040;
     --focus: #bee037;
+    scroll-behavior: smooth;
 }
 * {
     box-sizing: border-box;
@@ -26,6 +27,7 @@ body {
     padding: 0;
     font-family: "Noto Sans", sans-serif;
     min-height: 100vh;
+    line-height: 1.5;
 }
 div#left-top {
     background-color: var(--frame);
@@ -59,29 +61,43 @@ h1 {
     text-align: right;
     overflow-x: auto;
     white-space: nowrap;
-    /* hide the scrollbar */
     -ms-overflow-style: none;
     scrollbar-width: none;
-    /* width: calc(100vw - 10rem); */
 }
 h1::-webkit-scrollbar {
     display: none;
 }
-div#meta {
+div.meta {
     width: 16rem;
-    position: fixed;
-    top: 1.5rem;
+    position: relative;
     left: -8rem;
     background-color: var(--frame);
+    border-bottom: 1px solid var(--fg);
     transition:
     left 0.25s cubic-bezier(0.23, 1, 0.320, 1),
     border-radius 0.25s cubic-bezier(0.23, 1, 0.320, 1),
     width 0.25s cubic-bezier(0.23, 1, 0.320, 1);
+    line-height: initial;
 }
-div#meta, div#meta-content {
-    height: 3.75rem !important;
+div.meta, div.meta-content {
+    height: 3.75rem;
 }
-#meta-content {
+div#frame .meta {
+    position: fixed;
+    top: 12rem;
+    border-top: 1px solid var(--fg);
+    height: fit-content;
+}
+div#frame .meta-content {
+    width: 8rem;
+    height: fit-content;
+    text-align: right;
+    float: left;
+}
+div#frame .meta:is(:hover, :active, :focus, :focus-within) {
+    border: 0;
+}
+.meta-content {
     color: var(--accentred);
     font-size: 0.8em;
     padding: 0.25rem;
@@ -92,35 +108,18 @@ div#meta, div#meta-content {
     text-align: right;
     float: left;
     overflow-y: auto;
-    /* hide the scrollbar */
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-#meta-content::-webkit-scrollbar {
+.meta-content::-webkit-scrollbar {
     display: none;
 }
-#meta-content::after {
-    content: "METADATA";
-    /* display: block; */
-    /* clear: both; */
-    position: fixed;
-    top: 1.5rem;
-    left: 0;
-    font-size: 1rem;
-    padding: 0 0.25rem;
-    color: var(--fg);
-    width: 7.5rem;
-    transition: all 0.25s cubic-bezier(0.23, 1, 0.320, 1);
-}
-div#meta:is(:hover, :active, :focus) {
+div.meta:is(:hover, :active, :focus, :focus-within) {
     left: 0;
     border-radius: 0 0.5rem 0.5rem 0;
     width: 8.5rem;
-    animation: meta-hover 2s infinite;
-}
-div#meta:is(:hover, :active, :focus) #meta-content::after {
-    left: 6rem;
-    color: transparent;
+    animation: meta-hover 1s infinite;
+    border-bottom: 1px solid transparent;
 }
 @keyframes meta-hover {
     0% {
@@ -134,14 +133,14 @@ div#meta:is(:hover, :active, :focus) #meta-content::after {
     }
 }
 div#bottom {
-    width: 100vw;
+    width: 100%;
     height: 1.5rem;
     background-color: var(--frame);
     margin-top: -1rem;
     border-radius: 0 0 0 2rem;
 }
 div#radius-container {
-    width: calc(100vw - 8rem);
+    width: calc(100% - 8rem);
     height: 1rem;
     background-color: var(--frame);
     position: relative;
@@ -156,4 +155,126 @@ div#radius {
     position: absolute;
     left: 0;
     top: 0;
+}
+div#frame {
+    padding: 1rem 0 0 8rem;
+    background: var(--frame);
+    border-radius: 2rem 0 0 0;
+}
+div#spacer {
+    height: 1em;
+    background-color: var(--bg);
+}
+div#content {
+    background-color: var(--bg);
+    padding: 1rem;
+    border-radius: 1rem 0 0 0;
+    min-height: calc(100vh - 9.5rem);
+}
+code {
+    background-color: var(--frame);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    font-family: "Noto Sans Mono", monospace;
+}
+pre {
+    background-color: var(--frame);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    font-family: "Noto Sans Mono", monospace;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+pre mark {
+    background-color: var(--accentred);
+    color: var(--fg);
+}
+a {
+    color: var(--accentblue);
+    text-decoration: none;
+}
+strong, em {
+    color: var(--focus);
+}
+ins {
+    color: var(--accentgreen);
+}
+del {
+    color: var(--accentred);
+}
+blockquote {
+    border-left: 0.25rem solid var(--accentred);
+    padding-left: 0.5rem;
+    margin-left: 0;
+}
+cite {
+    font-size: 0.8em;
+    color: var(--accentred);
+}
+cite::before {
+    content: "— ";
+}
+table {
+    border: 1px solid var(--fg);
+    margin: 1rem 0;
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+    width: fit-content;
+}
+th, td {
+    text-align: left;
+    padding: 0.25rem 0.5rem;
+    width: fit-content;
+    background-color: var(--bg);
+}
+th {
+    font-weight: bold;
+    background-color: var(--accentred);
+}
+th.subhead {
+    color: var(--accentred);
+    border: 1px solid var(--accentred);
+    background-color: var(--bg);
+}
+div.links {
+    margin: 1rem 0;
+}
+div.links a {
+    color: var(--fg);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--accentblue);
+    margin: 0 0.25rem;
+}
+input, button, textarea, select, option {
+    appearance: none;
+    background-color: var(--bg);
+    border: 1px solid var(--fg);
+    border-radius: 0.25rem;
+    color: var(--fg);
+    padding: 0.25rem 0.5rem;
+    font-family: "Noto Sans Mono", monospace;
+}
+::-webkit-calendar-picker-indicator {
+    display: none;
+}
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+button {
+    cursor: pointer;
+    background-color: var(--accentblue);
+    color: var(--fg);
+}
+[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--accentred);
+}
+input:invalid {
+    background-color: var(--accentred);
 }
