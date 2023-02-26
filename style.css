@@ -299,7 +299,6 @@ body#redalert {
     }
 }
 body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div.meta) {
-    /* animation: redalert 1.5s infinite; */
     background-color: var(--accentred);
 }
 @media (max-width: 600px) {
