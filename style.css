@@ -308,7 +308,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
 }
 @media (prefers-reduced-motion) {
     body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div.meta) {
-        background-color: var(--accentred);
+        background-color: var(--frame);
     }
     * {
         animation: none !important;
