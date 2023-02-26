@@ -5,7 +5,6 @@
     --accentblue: #1f8fe5;
     --accentgreen: #12d799;
     --frame: #3a4755;
-    --selfg: #b67be0;
     --selbg: #b67be040;
     --focus: #bee037;
     scroll-behavior: smooth;
@@ -17,7 +16,6 @@
     outline: 1px solid var(--focus);
 }
 ::selection {
-    color: var(--selfg);
     background-color: var(--selbg);
 }
 body {
@@ -284,7 +282,6 @@ body#redalert {
     --accentred: #ea2e2e;
     --accentblue: #6c4eef;
     --accentgreen: #67dda2;
-    --selfg: #ffffff;
     --selbg: #ea2e2e60;
 }
 @keyframes redalert {
