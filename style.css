@@ -299,10 +299,19 @@ body#redalert {
     }
 }
 body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div.meta) {
-    background-color: var(--accentred);
+    animation: redalert 2s infinite;
 }
 @media (max-width: 600px) {
     div#frame {
         padding-left: 1rem;
+    }
+}
+@media (prefers-reduced-motion) {
+    body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div.meta) {
+        background-color: var(--accentred);
+    }
+    * {
+        animation: none !important;
+        transition: none !important;
     }
 }
