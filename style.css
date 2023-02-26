@@ -160,7 +160,6 @@ div#frame {
     padding: 1rem 0 0 8rem;
     background: var(--frame);
     border-radius: 2rem 0 0 0;
-    transition: padding-left 0.25s cubic-bezier(0.23, 1, 0.320, 1);
 }
 div#spacer {
     height: 1em;
@@ -276,11 +275,35 @@ button {
     cursor: not-allowed;
     background-color: var(--accentred);
 }
+/* invalid */
 input:invalid {
+    background-color: var(--accentred);
+}
+body#redalert {
+    --frame: #5a0000;
+    --accentred: #ea2e2e;
+    --accentblue: #6c4eef;
+    --accentgreen: #67dda2;
+    --selfg: #ffffff;
+    --selbg: #ea2e2e60;
+}
+@keyframes redalert {
+    0% {
+        background-color: var(--accentred);
+    }
+    50% {
+        background-color: var(--fg);
+    }
+    100% {
+        background-color: var(--accentred);
+    }
+}
+body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div.meta) {
+    /* animation: redalert 1.5s infinite; */
     background-color: var(--accentred);
 }
 @media (max-width: 600px) {
     div#frame {
-        padding-left: 1em;
+        padding-left: 1rem;
     }
 }
