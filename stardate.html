@@ -38,7 +38,7 @@
                 <input type="time" id="time" value="12:00:00" step="1" />
                 <button onclick="calc()">Calculate</button>
                 <p id="stardate"></p>
-                <h2>Stardate &rarr; Earth</h2>
+                <h2>Stardate &rarr; Earth (<code>yyyy-mm-dd hh:mm:ss</code>)</h2>
                 <input type="number" id="stardate2" value="0" step="any" />
                 <button onclick="uncalc()">Calculate</button>
                 <p id="date2"></p>
@@ -107,6 +107,7 @@
                             m++;
                         }
                         var d = doy - ms[m - 1] + 1;
+                        y = String(y).padStart(4, "0");
                         m = String(m).padStart(2, "0");
                         d = String(d).padStart(2, "0");
                         h = String(h).padStart(2, "0");
