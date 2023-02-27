@@ -26,19 +26,25 @@
         <div id="spacer"></div>
         <div id="frame">
             <div id="content">
-                <p>Uses the TNG-era(-onward, incl. DISs3 etc.) stardate system, where 2323 = 0. TOS-era stardates are just sorta random.</p>
-                <p>For some reason, <i>Lower Decks</i> uses a variant on this. I haven't found what the formula is, but it's just a difference of a few months.</p>
-                <p>The stardates in the "LAST REVISION" sections in the top left use 2000 as the base instead of 2323. To get these,</p>
+                <h2>Misc. notes</h2>
                 <ul>
-                    <li>If you start with an Earth date: add 323000 to the stardate you get</li>
-                    <li>If you start with a stardate: subtract 323000 before converting</li>
+                    <li>Uses the TNG-era(-onward, incl. DISs3 etc.) stardate system, where 2323 = 0. TOS-era stardates are just sorta random.</li>
+                    <li>For some reason, <i>Lower Decks</i> uses a variant on this. I haven't found what the formula is, but it's just a difference of a few months.</li>
+                    <li>The stardates in the "LAST REVISION" sections in the top left use 2000 as the base instead of 2323. To get these,
+                        <ul>
+                            <li>If you start with an Earth date: add 323000 to the stardate you get</li>
+                            <li>If you start with a stardate: subtract 323000 before converting</li>
+                        </ul>
+                    </li>
+                    <li>JavaScript has a maximum date of <a href="https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs#Year_275,760">Sep 13, 275760</a> and cannnot represent dates after that.</li>
+                    <li>The "Stardate &rarr; Earth" outputs in the format <code>yyyy-mm-dd hh:mm:ss</code>.</p>
                 </ul>
                 <h2>Earth &rarr; Stardate</h2>
                 <input type="date" id="date" value="2364-04-05" />
                 <input type="time" id="time" value="12:00:00" step="1" />
                 <button onclick="calc()">Calculate</button>
                 <p id="stardate"></p>
-                <h2>Stardate &rarr; Earth (<code>yyyy-mm-dd hh:mm:ss</code>)</h2>
+                <h2>Stardate &rarr; Earth</h2>
                 <input type="number" id="stardate2" value="0" step="any" />
                 <button onclick="uncalc()">Calculate</button>
                 <p id="date2"></p>
