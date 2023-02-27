@@ -13,8 +13,8 @@
             <div class="meta" tabindex="0">
                 <div class="meta-content">
                     <b>LAST REVISION</b><br />
-                    Stardate 23157.07<br />
-                    2023 Feb 27 07:56
+                    Stardate 23157.10<br />
+                    2023 Feb 27 08:13
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                 </ul>
                 <h2>Earth &rarr; Stardate</h2>
                 <input type="date" id="date" value="2364-04-05" />
-                <input type="time" id="time" value="12:00:00" step="1" />
+                <input type="time" id="time" value="12:00:00" step="0.001" />
                 <button onclick="calc()">Calculate</button>
                 <p id="stardate"></p>
                 <h2>Stardate &rarr; Earth</h2>
@@ -75,6 +75,7 @@
                         var min = parseInt(document.getElementById("time").value.split(":")[1]);
                         var s = parseInt(document.getElementById("time").value.split(":")[2]);
                         if (isNaN(s)) s = 0;
+                        var ss = parseInt(document.getElementById("time").value.split(".")[1]);
                         var ml = [31, 28 + leap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
                         var ms /* month starts */ = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
                         var yl = 365 + leap(y);
@@ -84,8 +85,7 @@
                             }
                         }
                         var doy = ms[m - 1] + d - 1;
-                        console.log(y, m, d, h, min, s, doy);
-                        var ed = y + (doy + h / 24 + min / 1440 + s / 86400) / yl;
+                        var ed = y + (doy + h / 24 + min / 1440 + s / 86400 + ss / 86400000) / yl;
                         var sd = 1000 * (ed - 2323);
                         document.getElementById("stardate").innerHTML = sd;
                     }
@@ -98,13 +98,14 @@
                         var f = "0." + v[1];
                         var yl = 365 + leap(y);
                         if (f == 0) {
-                            document.getElementById("date2").innerHTML = y + "-01-01 00:00:00";
+                            document.getElementById("date2").innerHTML = y + "-01-01 00:00:00.000";
                             return;
                         }
                         var doy = Math.floor(f * yl) % yl;
                         var h = Math.floor(f * 24 * yl) % 24;
                         var min = Math.floor(f * 1440 * yl) % 60;
                         var s = Math.floor(f * 86400 * yl) % 60;
+                        var ss = Math.floor((1000 * ((f * 86400 * yl) % 60 - s)));
                         var ml = [31, 28 + leap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
                         var ms = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
                         if (leap(y)) {
@@ -123,7 +124,7 @@
                         h = String(h).padStart(2, "0");
                         min = String(min).padStart(2, "0");
                         s = String(s).padStart(2, "0");
-                        document.getElementById("date2").innerHTML = y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s;
+                        document.getElementById("date2").innerHTML = y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s + "." + ss;
                     }
                 </script>        
             </div>
