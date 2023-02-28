@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- LCARS: Library Computer Access/Retrieval System -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>LCARS</title>
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div id="left-top">
+            <a href="index.html">INDEX</a>
+        </div>
+        <h1>Stardate Converter but different</h1>
+        <div id="radius-container">
+            <div id="radius"></div>
+        </div>
+        <div id="bottom"></div>
+        <div id="spacer"></div>
+        <div id="frame">
+            <div id="content">
+                <h2>Misc. notes</h2>
+                <ul>
+                    <li>Uses the formula on <code>thelcars.com</code>'s news page.</li>
+                    <li>JavaScript has a maximum date of <a href="https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs#Year_275,760">Sep 13, 275760</a> and cannnot represent dates after that.</li>
+                </ul>
+                <input type="date" id="date" value="2323-01-01" />
+                <input type="time" id="time" value="00:00:00.000" step="0.001" />
+                <button onclick="calc()">Calculate</button>
+                <p id="stardate"></p>
+                <script>
+                    function leap(y) {
+                        return y % 4 == 0 && (y % 100 != 0 || y % 400 == 0);
+                    }
+                    function valid(y, m, d) {
+                        if (isNaN(y) || isNaN(m) || isNaN(d)) {
+                            return false;
+                        }
+                        return true;
+                    }
+                    function calc() {
+                        var y = parseInt(document.getElementById("date").value.split("-")[0]);
+                        var m = parseInt(document.getElementById("date").value.split("-")[1]);
+                        var d = parseInt(document.getElementById("date").value.split("-")[2]);
+                        if (!valid(y, m, d)) {
+                            document.getElementById("stardate").innerHTML = "invalid date";
+                            return;
+                        }
+                        var SD = (y - 1966) * 1000;
+                        var days = 0;
+                        for (var i = 1; i < m; i++) {
+                            if (i == 2) {
+                                days += leap(y) ? 29 : 28;
+                            } else if (i == 4 || i == 6 || i == 9 || i == 11) {
+                                days += 30;
+                            } else {
+                                days += 31;
+                            }
+                        }
+                        days += d;
+                        SD += days;
+                        var h = parseInt(document.getElementById("time").value.split(":")[0]);
+                        SD += "." + h;
+                        SD = parseFloat(SD);
+                        document.getElementById("stardate").innerHTML = SD;
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
