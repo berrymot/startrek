@@ -46,7 +46,7 @@
                             document.getElementById("stardate").innerHTML = "invalid date";
                             return;
                         }
-                        var SD = (y - 1966) * 1000;
+                        var SD = String(y - 1966);
                         var days = 0;
                         for (var i = 1; i < m; i++) {
                             if (i == 2) {
@@ -58,10 +58,9 @@
                             }
                         }
                         days += d;
-                        SD += days;
+                        SD += String(days);
                         var h = parseInt(document.getElementById("time").value.split(":")[0]);
                         SD += "." + h;
-                        SD = parseFloat(SD);
                         document.getElementById("stardate").innerHTML = SD;
                     }
                 </script>
