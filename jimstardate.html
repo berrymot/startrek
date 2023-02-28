@@ -58,7 +58,7 @@
                             }
                         }
                         days += d;
-                        SD += String(days);
+                        SD += String(days).padStart(3, "0");
                         var h = parseInt(document.getElementById("time").value.split(":")[0]);
                         SD += "." + h;
                         document.getElementById("stardate").innerHTML = SD;
