@@ -279,6 +279,9 @@ input:invalid {
 ul {
     list-style-type: disc;
 }
+li, dd {
+    margin: 0.5em 0;
+}
 body#redalert {
     --frame: #5a0000;
     --accentred: #ea2e2e;
