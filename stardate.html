@@ -66,7 +66,6 @@
                         var y = parseInt(document.getElementById("date").value.split("-")[0]);
                         var m = parseInt(document.getElementById("date").value.split("-")[1]);
                         var d = parseInt(document.getElementById("date").value.split("-")[2]);
-                        console.log(y, m, d, valid(y, m, d));
                         if (!valid(y, m, d)) {
                             document.getElementById("stardate").innerHTML = "invalid date";
                             return;
