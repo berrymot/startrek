@@ -233,20 +233,20 @@ th {
 }
 th.subhead {
     color: var(--accentred);
-    border: 1px solid var(--accentred);
-    background-color: var(--frame);
+    border-bottom: 2px solid var(--accentred);
+    background-color: var(--bg);
 }
 .rtr {
-    border-top-right-radius: 1rem;
+    border-top-right-radius: 0.5rem;
 }
 .rtl {
-    border-top-left-radius: 1rem;
+    border-top-left-radius: 0.5rem;
 }
 .rbr {
-    border-bottom-right-radius: 1rem;
+    border-bottom-right-radius: 0.5rem;
 }
 .rbl {
-    border-bottom-left-radius: 1rem;
+    border-bottom-left-radius: 0.5rem;
 }
 div.links {
     margin: 1rem 0;
@@ -296,7 +296,7 @@ li, dd {
 }
 hr {
     border: 0;
-    border-top: 1px solid var(--frame);
+    border-top: 2px solid var(--frame);
 }
 body#redalert {
     --frame: #5a0000;
