@@ -250,15 +250,22 @@ th.subhead {
     border-bottom-left-radius: 0.5rem;
 }
 div.links {
-    margin: 1rem 0;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 0.5fr;
+    grid-column-gap: 0.25rem;
+    grid-row-gap: 0.25rem;
 }
 div.links a {
-    color: var(--fg);
+    color: var(--bg);
+    font-weight: bold;
     text-decoration: none;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     background-color: var(--accentblue);
-    margin: 0 0.25rem;
+    margin: 0.25rem;
+    display: flex;
 }
 input, button, textarea, select, option {
     appearance: none;
