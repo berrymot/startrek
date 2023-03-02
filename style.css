@@ -214,7 +214,6 @@ cite::before {
     content: "— ";
 }
 table {
-    border: 1px solid var(--fg);
     margin: 1rem 0;
     display: block;
     overflow-x: auto;
