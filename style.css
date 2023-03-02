@@ -193,7 +193,7 @@ a {
     text-decoration: none;
 }
 strong, em {
-    color: var(--accentblue);
+    color: var(--focus);
 }
 ins {
     color: var(--accentgreen);
