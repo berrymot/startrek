@@ -234,7 +234,19 @@ th {
 th.subhead {
     color: var(--accentred);
     border: 1px solid var(--accentred);
-    background-color: var(--bg);
+    background-color: var(--frame);
+}
+.rtr {
+    border-top-right-radius: 1rem;
+}
+.rtl {
+    border-top-left-radius: 1rem;
+}
+.rbr {
+    border-bottom-right-radius: 1rem;
+}
+.rbl {
+    border-bottom-left-radius: 1rem;
 }
 div.links {
     margin: 1rem 0;
