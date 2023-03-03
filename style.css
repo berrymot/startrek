@@ -212,7 +212,7 @@ cite {
     color: var(--accentred);
 }
 cite::before {
-    content: "— ";
+    content: "– ";
 }
 table {
     margin: 1rem 0;
