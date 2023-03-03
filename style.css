@@ -264,6 +264,9 @@ div.links a {
     margin: 0.5rem 0;
     display: block;
 }
+div.links a:hover {
+    text-decoration: underline;
+}
 div.links a::before {
     content: "› ";
     color: var(--fg);
