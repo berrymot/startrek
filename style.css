@@ -252,12 +252,13 @@ th.subhead {
 }
 div.links {
     margin: 1rem 0;
+    padding-left: 40px;
 }
 div.links a {
     font-weight: bold;
     text-decoration: none;
-    padding: 0.25rem 0.5rem;
-    margin: 0.25rem;
+    margin: 0.5rem 0;
+    display: block;
 }
 div.links a::before {
     content: "› ";
