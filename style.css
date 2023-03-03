@@ -157,6 +157,7 @@ div#radius {
 }
 div#frame {
     padding: 1rem 0 0 8rem;
+    transition: padding-left 0.5s;
     background: var(--frame);
     border-radius: 2rem 0 0 0;
 }
@@ -192,6 +193,9 @@ pre mark {
 a {
     color: var(--accentblue);
     text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 strong, em {
     color: var(--focus);
