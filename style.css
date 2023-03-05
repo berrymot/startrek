@@ -260,6 +260,7 @@ div.links a {
     text-decoration: none;
     margin: 0.5rem 0;
     display: block;
+    width: fit-content;
 }
 div.links a:hover {
     text-decoration: underline;
