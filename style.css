@@ -229,6 +229,7 @@ th, td {
     padding: 0.25rem 0.5rem;
     width: fit-content;
     background-color: var(--bg);
+    vertical-align: top;
 }
 th {
     font-weight: bold;
