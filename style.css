@@ -231,9 +231,6 @@ th, td {
     background-color: var(--bg);
     vertical-align: top;
 }
-td {
-    border-bottom: 2px solid var(--frame);
-}
 th {
     font-weight: bold;
     background-color: var(--accentred);
