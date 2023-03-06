@@ -239,9 +239,7 @@ th {
     background-color: var(--accentred);
 }
 th.subhead {
-    color: var(--accentred);
-    border-bottom: 2px solid var(--accentred);
-    background-color: var(--bg);
+    background-color: var(--frame);
 }
 .rtr {
     border-top-right-radius: 0.5rem;
