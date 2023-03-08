@@ -307,6 +307,7 @@ hr {
     border: 0;
     border-top: 2px solid var(--frame);
 }
+.green { color: var(--accentgreen); }
 body#redalert {
     --frame: #5a0000;
     --accentred: #ea2e2e;
