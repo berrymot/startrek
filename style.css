@@ -47,7 +47,7 @@ div#left-top a {
     font-weight: bold;
     color: var(--fg);
     min-height: 1px;
-    transition: min-height 0.5s 0.25s;
+    transition: min-height 0.5s, color 0.5s;
 }
 div#left-top a:is(:hover, :active) {
     background-color: var(--accentred);
@@ -338,18 +338,21 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
     div#frame {
         padding-left: 2rem;
     }
-    #left-top, #left-top * {
+    div#left-top, div#left-top * {
         width: 2rem;
         color: transparent;
     }
-    #radius-container {
+    div.meta {
+        left: -24rem;
+    }
+    div#radius-container {
         width: calc(100% - 2rem);
         left: 2rem;
     }
     h1 {
         left: 3rem;
     }
-    #left-top a {
+    div#left-top a {
         min-height: 5rem;
     }
 }
