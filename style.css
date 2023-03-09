@@ -49,6 +49,7 @@ div#left-top a {
     min-height: 1px;
     width: 100%;
     transition: min-height 0.5s, color 0.5s, width 0.5s;
+    overflow-wrap: 
 }
 div#left-top a:is(:hover, :active) {
     background-color: var(--accentred);
