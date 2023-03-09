@@ -78,7 +78,7 @@ div.meta {
     left: -8rem;
     background-color: var(--frame);
     border-bottom: 1px solid var(--fg);
-    transition: left 0.5s, width 0.5s, height 0.5s;
+    transition: left 0.5s, width 0.5s, height 0.5s, border-radius 0.5s;
     line-height: initial;
 }
 div.meta, div.meta-content {
@@ -120,18 +120,15 @@ div.meta:is(:hover, :active, :focus, :focus-within) {
     left: 0;
     border-radius: 0 0.5rem 0.5rem 0;
     width: 8.5rem;
-    animation: meta-hover 1s infinite;
+    animation: meta-hover 1s forwards 0.5s;
     border-bottom: 1px solid transparent;
 }
 @keyframes meta-hover {
     0% {
         background-color: var(--frame);
     }
-    50% {
-        background-color: var(--accentred);
-    }
     100% {
-        background-color: var(--frame);
+        background-color: var(--accentred);
     }
 }
 div#bottom {
