@@ -367,6 +367,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         --bg: #fefeff;
         --fg: #222;
         --frame: #cce5f1;
+        --focus: #57b2de;
         --accentred: #a84300;
         --accentblue: #6388ad;
         --accentgreen: #00d383;
