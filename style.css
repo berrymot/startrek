@@ -111,6 +111,7 @@ div#frame .meta:is(:hover, :active, :focus, :focus-within) {
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    transition: width 0.5s, height 0.5s;
 }
 .meta-content::-webkit-scrollbar {
     display: none;
@@ -348,6 +349,11 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
     }
     div.meta, div.meta-content {
         height: 0;
+        width: 0;
+        left: -8rem !important;
+    }
+    div.meta-content {
+        float: none;
     }
     div#radius-container {
         width: calc(100% - 2rem);
