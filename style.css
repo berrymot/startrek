@@ -339,7 +339,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
 @media (max-width: 600px) {
     div#frame {
         padding-left: 2rem;
-        border-radius: 1.5rem;
+        border-radius: 1.5rem 0 0 0;
     }
     div#left-top, div#left-top * {
         width: 2rem;
@@ -363,7 +363,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         height: 1.5rem;
     }
     div#content {
-        min-height: calc(100% - 9.5rem);
+        min-height: calc(100vh - 9.5rem);
     }
 }
 @media (prefers-reduced-motion) {
