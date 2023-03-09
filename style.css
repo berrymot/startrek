@@ -93,6 +93,7 @@ div#frame .meta-content {
     height: fit-content;
     text-align: right;
     float: left;
+    transition: height 0.5s;
 }
 div#frame .meta:is(:hover, :active, :focus, :focus-within) {
     border: 0;
@@ -345,7 +346,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         width: 2rem;
         color: transparent;
     }
-    div.meta {
+    div.meta, div.meta-content {
         height: 0;
     }
     div#radius-container {
