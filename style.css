@@ -120,16 +120,7 @@ div.meta:is(:hover, :active, :focus, :focus-within) {
     left: 0;
     border-radius: 0 0.5rem 0.5rem 0;
     width: 8.5rem;
-    animation: meta-hover 1s forwards 0.25s;
     border-bottom: 1px solid transparent;
-}
-@keyframes meta-hover {
-    0% {
-        background-color: var(--frame);
-    }
-    100% {
-        background-color: var(--accentred);
-    }
 }
 div#bottom {
     width: 100%;
