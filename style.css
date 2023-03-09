@@ -34,7 +34,7 @@ div#left-top {
     width: 8rem;
     height: 6rem;
     overflow-x: visible;
-    transition: width 0.5s, color 0.5s;
+    transition: width 0.25s, color 0.25s;
 }
 div#left-top a {
     text-decoration: none;
@@ -48,7 +48,7 @@ div#left-top a {
     color: var(--fg);
     min-height: 1px;
     width: 100%;
-    transition: min-height 0.5s, color 0.5s, width 0.5s;
+    transition: min-height 0.25s, color 0.25s, width 0.25s;
     overflow-wrap: break-word;
 }
 div#left-top a:is(:hover, :active) {
@@ -67,7 +67,7 @@ h1 {
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    transition: left 0.5s;
+    transition: left 0.25s;
 }
 h1::-webkit-scrollbar {
     display: none;
@@ -78,7 +78,7 @@ div.meta {
     left: -8rem;
     background-color: var(--frame);
     border-bottom: 1px solid var(--fg);
-    transition: left 0.5s, width 0.5s, height 0.5s, border-radius 0.5s;
+    transition: left 0.25s, width 0.25s, height 0.25s, border-radius 0.25s;
     line-height: initial;
 }
 div.meta, div.meta-content {
@@ -93,7 +93,7 @@ div#frame .meta-content {
     width: 8rem;
     text-align: right;
     float: left;
-    transition: height 0.5s;
+    transition: height 0.25s;
 }
 div#frame .meta:is(:hover, :active, :focus, :focus-within) {
     border: 0;
@@ -111,7 +111,7 @@ div#frame .meta:is(:hover, :active, :focus, :focus-within) {
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    transition: width 0.5s, height 0.5s;
+    transition: width 0.25s, height 0.25s;
 }
 .meta-content::-webkit-scrollbar {
     display: none;
@@ -120,7 +120,7 @@ div.meta:is(:hover, :active, :focus, :focus-within) {
     left: 0;
     border-radius: 0 0.5rem 0.5rem 0;
     width: 8.5rem;
-    animation: meta-hover 1s forwards 0.5s;
+    animation: meta-hover 1s forwards 0.25s;
     border-bottom: 1px solid transparent;
 }
 @keyframes meta-hover {
@@ -137,7 +137,7 @@ div#bottom {
     background-color: var(--frame);
     margin-top: -1rem;
     border-radius: 0 0 0 2rem;
-    transition: height 0.5s;
+    transition: height 0.25s;
 }
 div#radius-container {
     width: calc(100% - 8rem);
@@ -146,7 +146,7 @@ div#radius-container {
     position: relative;
     left: 8rem;
     top: -0.5rem;
-    transition: width 0.5s, left 0.5s;
+    transition: width 0.25s, left 0.25s;
 }
 div#radius {
     width: 100%;
@@ -159,7 +159,7 @@ div#radius {
 }
 div#frame {
     padding: 1rem 0 0 8rem;
-    transition: padding-left 0.5s, border-radius 0.5s;
+    transition: padding-left 0.25s, border-radius 0.25s;
     background: var(--frame);
     border-radius: 2rem 0 0 0;
 }
@@ -172,7 +172,7 @@ div#content {
     padding: 1rem;
     border-radius: 1rem 0 0 0;
     min-height: calc(100vh - 10rem);
-    transition: min-height 0.5s;
+    transition: min-height 0.25s;
 }
 code {
     background-color: var(--frame);
