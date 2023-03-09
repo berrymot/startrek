@@ -78,7 +78,7 @@ div.meta {
     left: -8rem;
     background-color: var(--frame);
     border-bottom: 1px solid var(--fg);
-    transition: left 0.25s cubic-bezier(0.23, 1, 0.320, 1), width 0.25s cubic-bezier(0.23, 1, 0.320, 1), height 0.5s;
+    transition: left 0.5s, width 0.5s, height 0.5s;
     line-height: initial;
 }
 div.meta, div.meta-content {
