@@ -34,6 +34,7 @@ div#left-top {
     width: 8rem;
     height: 6rem;
     overflow-x: visible;
+    transition: width 0.5s, color 0.5s;
 }
 div#left-top a {
     text-decoration: none;
@@ -45,6 +46,8 @@ div#left-top a {
     background-color: var(--accentblue);
     font-weight: bold;
     color: var(--fg);
+    min-height: 1px;
+    transition: min-height 0.5s 0.25s;
 }
 div#left-top a:is(:hover, :active) {
     background-color: var(--accentred);
@@ -62,6 +65,7 @@ h1 {
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    transition: left 0.5s;
 }
 h1::-webkit-scrollbar {
     display: none;
@@ -142,6 +146,7 @@ div#radius-container {
     position: relative;
     left: 8rem;
     top: -0.5rem;
+    transition: width 0.5s, left 0.5s;
 }
 div#radius {
     width: 100%;
@@ -332,6 +337,20 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
 @media (max-width: 600px) {
     div#frame {
         padding-left: 2rem;
+    }
+    #left-top, #left-top * {
+        width: 2rem;
+        color: transparent;
+    }
+    #radius-container {
+        width: calc(100% - 2rem);
+        left: 2rem;
+    }
+    h1 {
+        left: 3rem;
+    }
+    #left-top a {
+        min-height: 5rem;
     }
 }
 @media (prefers-reduced-motion) {
