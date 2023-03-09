@@ -361,6 +361,17 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         min-height: calc(100vh - 9.5rem);
     }
 }
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #fefbfa;
+        --fg: #222222;
+        /* --accentred: ;
+        --accentgreen: ;
+        --accentblue: ; */
+        --frame: #cce5f1;
+        --focus: #57b2de;
+    }
+}
 @media (prefers-reduced-motion) {
     body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div.meta) {
         background-color: var(--frame);
