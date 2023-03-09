@@ -77,7 +77,7 @@ div.meta {
     left: -8rem;
     background-color: var(--frame);
     border-bottom: 1px solid var(--fg);
-    transition: left 0.25s cubic-bezier(0.23, 1, 0.320, 1), width 0.25s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: left 0.25s cubic-bezier(0.23, 1, 0.320, 1), width 0.25s cubic-bezier(0.23, 1, 0.320, 1), height 0.5s;
     line-height: initial;
 }
 div.meta, div.meta-content {
@@ -87,7 +87,6 @@ div#frame .meta {
     position: fixed;
     top: 12rem;
     border-top: 1px solid var(--fg);
-    height: fit-content;
 }
 div#frame .meta-content {
     width: 8rem;
@@ -139,6 +138,7 @@ div#bottom {
     background-color: var(--frame);
     margin-top: -1rem;
     border-radius: 0 0 0 2rem;
+    transition: height 0.5s;
 }
 div#radius-container {
     width: calc(100% - 8rem);
@@ -160,7 +160,7 @@ div#radius {
 }
 div#frame {
     padding: 1rem 0 0 8rem;
-    transition: padding-left 0.5s;
+    transition: padding-left 0.5s, border-radius 0.5s;
     background: var(--frame);
     border-radius: 2rem 0 0 0;
 }
@@ -173,6 +173,7 @@ div#content {
     padding: 1rem;
     border-radius: 1rem 0 0 0;
     min-height: calc(100vh - 10rem);
+    transition: min-height 0.5s;
 }
 code {
     background-color: var(--frame);
@@ -338,13 +339,14 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
 @media (max-width: 600px) {
     div#frame {
         padding-left: 2rem;
+        border-radius: 1.5rem;
     }
     div#left-top, div#left-top * {
         width: 2rem;
         color: transparent;
     }
     div.meta {
-        left: -24rem;
+        height: 0;
     }
     div#radius-container {
         width: calc(100% - 2rem);
@@ -355,6 +357,13 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
     }
     div#left-top a {
         min-height: 5rem;
+        color: transparent;
+    }
+    div#bottom {
+        height: 1.5rem;
+    }
+    div#content {
+        min-height: calc(100% - 9.5rem);
     }
 }
 @media (prefers-reduced-motion) {
