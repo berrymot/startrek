@@ -368,14 +368,14 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         --fg: #222;
         --frame: #cce5f1;
         --focus: #57b2de;
-        --accentred: #a84300;
+        --accentred: #ce2029;
         --accentblue: #6388ad;
         --accentgreen: #00d383;
     }
     div#content {
         background-color: #f9fdff;
     }
-    div#left-top a {
+    div#left-top a, th:not(.subhead) {
         color: var(--bg);
     }
 }
