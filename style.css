@@ -2,10 +2,10 @@
 :root {
     --bg: #101010;
     --fg: #ffffff;
-    --accentred: #e5501f;
+    --accentred: #ff3151;
     --accentblue: #30b5e6;
     --accentgreen: #12d799;
-    --frame: #3a4755;
+    --frame: #1070b0;
     --selbg: #b67be060;
     --focus: #bee037;
     scroll-behavior: smooth;
@@ -309,8 +309,6 @@ hr {
 .green { color: var(--accentgreen); }
 body#redalert {
     --frame: #5a0000;
-    --accentred: #ea2e2e;
-    --selbg: #ea2e2e60;
 }
 @keyframes redalert {
     0% {
