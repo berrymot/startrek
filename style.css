@@ -363,7 +363,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
 }
 @media (prefers-color-scheme: light) {
     /* thanks beefox */
-    :root {
+    :root, body#redalert {
         --bg: #fefeff;
         --fg: #222;
         --frame: #cce5f1;
@@ -377,6 +377,20 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
     }
     div#left-top a, th:not(.subhead) {
         color: var(--bg);
+    }
+    body#redalert {
+        animation: redalert-light 2s infinite;
+    }
+    @keyframes redalert-light {
+        0% {
+            background: var(--frame);
+        }
+        50% {
+            background: var(--accentred);
+        }
+        100% {
+            background: var(--frane);
+        }
     }
 }
 @media (prefers-reduced-motion) {
