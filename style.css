@@ -374,6 +374,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         --accentred: #ce2029;
         --accentblue: #6388ad;
         --accentgreen: #068c59;
+        --selbg: #b67be060;
     }
     div#content {
         background-color: #f9fdff;
@@ -395,7 +396,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
             background: var(--frame);
         }
     }
-    button, :invalid {
+    button {
         color: var(--bg);
     }
 }
