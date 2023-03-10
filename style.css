@@ -285,6 +285,7 @@ button {
     cursor: pointer;
     background-color: var(--accentblue);
     color: var(--fg);
+    font-weight: bold;
 }
 [disabled] {
     opacity: 0.5;
