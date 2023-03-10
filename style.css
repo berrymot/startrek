@@ -290,9 +290,8 @@ button {
 [disabled] {
     opacity: 0.5;
     cursor: not-allowed;
-    background-color: var(--accentred);
 }
-input:invalid {
+:invalid {
     background-color: var(--accentred);
 }
 ul {
@@ -393,7 +392,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
             background: var(--frame);
         }
     }
-    button {
+    button, :invalid {
         color: var(--bg);
     }
 }
