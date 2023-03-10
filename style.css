@@ -352,7 +352,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
     }
     div#left-top a {
         min-height: 5rem;
-        color: transparent;
+        color: transparent !important;
     }
     div#bottom {
         height: 1.5rem;
