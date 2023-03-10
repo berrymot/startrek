@@ -370,7 +370,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         --focus: #3d918b;
         --accentred: #ce2029;
         --accentblue: #6388ad;
-        --accentgreen: #00d383;
+        --accentgreen: #068c59;
     }
     div#content {
         background-color: #f9fdff;
