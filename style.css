@@ -293,7 +293,8 @@ button {
     cursor: not-allowed;
 }
 :invalid {
-    background-color: var(--accentred);
+    color: var(--accentred);
+    font-weight: bold;
 }
 ul {
     list-style-type: disc;
@@ -309,8 +310,6 @@ hr {
 body#redalert {
     --frame: #5a0000;
     --accentred: #ea2e2e;
-    --accentblue: #6c4eef;
-    --accentgreen: #67dda2;
     --selbg: #ea2e2e60;
 }
 @keyframes redalert {
