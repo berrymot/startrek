@@ -6,7 +6,6 @@
     --accentblue: #30b5e6;
     --accentgreen: #12d799;
     --frame: #1070b0;
-    --selbg: #b67be060;
     --focus: #bee037;
     scroll-behavior: smooth;
 }
@@ -15,9 +14,6 @@
 }
 :focus {
     outline: 1px solid var(--focus);
-}
-::selection {
-    background-color: var(--selbg);
 }
 body {
     background-color: var(--bg);
@@ -372,7 +368,6 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         --accentred: #ce2029;
         --accentblue: #6388ad;
         --accentgreen: #068c59;
-        --selbg: #b67be060;
     }
     div#content {
         background-color: #f9fdff;
