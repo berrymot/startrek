@@ -53,6 +53,12 @@
                 <button onclick="uncalc()">Calculate</button>
                 <p id="date2"></p>
                 <script>
+                    var qs = window.location.search;
+                    var par = new URLSearchParams(qs);
+                    if (par.has("s") && par.get("s") != "") {
+                        document.getElementById("stardate2").value = par.get("s");
+                        uncalc();
+                    }
                     function leap(y) {
                         return y % 4 == 0 && (y % 100 != 0 || y % 400 == 0);
                     }
