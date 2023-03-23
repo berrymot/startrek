@@ -7,7 +7,11 @@
     --accentgreen: #12d799;
     --frame: #1070b0;
     --focus: #bee037;
+    --sel: #8e07d060;
     scroll-behavior: smooth;
+}
+::selection {
+    background-color: var(--sel);
 }
 * {
     box-sizing: border-box;
@@ -368,6 +372,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         --accentred: #ce2029;
         --accentblue: #6388ad;
         --accentgreen: #068c59;
+        --sel: #e6b87760;
     }
     div#content {
         background-color: #f9fdff;
