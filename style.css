@@ -351,12 +351,6 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
     table {
         white-space: nowrap;
     }
-    table::before {
-        content: "\2194";
-        display: block;
-        text-align: center;
-        white-space: normal;
-    }
 }
 @media (prefers-color-scheme: light) {
     /* thanks beefox */
