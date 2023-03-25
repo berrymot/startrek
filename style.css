@@ -238,18 +238,6 @@ th {
 th.subhead {
     background-color: var(--frame);
 }
-.rtr {
-    border-top-right-radius: 0.5rem;
-}
-.rtl {
-    border-top-left-radius: 0.5rem;
-}
-.rbr {
-    border-bottom-right-radius: 0.5rem;
-}
-.rbl {
-    border-bottom-left-radius: 0.5rem;
-}
 div.links {
     margin: 1rem 0;
     padding-left: 40px;
