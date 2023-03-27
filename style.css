@@ -244,6 +244,7 @@ th, td {
     width: fit-content;
     background-color: var(--bg);
     vertical-align: baseline;
+    white-space: nowrap;
 }
 th {
     font-weight: bold;
