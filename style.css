@@ -229,7 +229,7 @@ div.twrap {
 }
 table {
     margin: 1rem;
-    display: block;
+    display: inline-block;
     overflow-x: hidden;
     width: fit-content;
     border-spacing: 0;
@@ -361,9 +361,6 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
     }
     div#content {
         min-height: calc(100vh - 9.5rem);
-    }
-    table {
-        white-space: nowrap;
     }
 }
 @media (prefers-color-scheme: light) {
