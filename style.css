@@ -236,7 +236,7 @@ div.twrap {
     overflow-x: scroll;
 }
 table {
-    margin: 1rem 0.5rem;
+    margin: 1rem;
     display: block;
     overflow-x: hidden;
     width: fit-content;
