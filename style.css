@@ -226,6 +226,11 @@ div.twrap {
 }
 .twrap > div {
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.twrap > div::-webkit-scrollbar {
+    display: none;
 }
 table {
     margin: 1rem;
