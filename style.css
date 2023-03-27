@@ -219,7 +219,7 @@ div.twrap {
 .twrap::before {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: -1px;
     opacity: 100%;
     pointer-events: none;
     background: linear-gradient(to right, var(--bg), transparent 1rem), linear-gradient(to left, var(--bg), transparent 1rem);
