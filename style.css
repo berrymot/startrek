@@ -222,7 +222,7 @@ div.twrap {
     inset: 0;
     opacity: 100%;
     pointer-events: none;
-    background: linear-gradient(to right, var(--bg), transparent 0.5rem), linear-gradient(to left, var(--bg), transparent 0.5rem);
+    background: linear-gradient(to right, var(--bg), transparent 1rem), linear-gradient(to left, var(--bg), transparent 1rem);
 }
 .twrap > div {
     overflow-x: scroll;
