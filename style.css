@@ -212,10 +212,33 @@ cite {
 cite::before {
     content: "– ";
 }
+div.twrap {
+    max-width: 100%;
+    position: relative;
+}
+.twrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, var(--bg), transparent 0.5rem);
+}
+.twrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left, var(--bg), transparent 0.5rem);
+}
+.twrap > div {
+    overflow-x: scroll;
+}
 table {
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
     display: block;
-    overflow-x: auto;
+    overflow-x: hidden;
     max-width: 100%;
     width: fit-content;
     border-spacing: 0;
