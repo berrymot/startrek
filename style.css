@@ -317,6 +317,10 @@ hr {
     border-top: 2px solid var(--frame);
 }
 .green { color: var(--accentgreen); }
+mjx-container[display="true"] {
+    text-align: left;
+    padding-left: 40px;
+}
 body#redalert {
     --frame: #5a0000;
 }
