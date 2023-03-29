@@ -318,8 +318,8 @@ hr {
 }
 .green { color: var(--accentgreen); }
 mjx-container[display="true"] {
-    text-align: left;
-    padding-left: 40px;
+    text-align: left !important;
+    padding-left: 40px !important;
 }
 body#redalert {
     --frame: #5a0000;
