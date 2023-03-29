@@ -7,7 +7,22 @@
         <link rel="stylesheet" href="style.css" />
         <style>
             div#frame {
-                background: linear-gradient(to bottom, var(--frame), transparent);
+                background: linear-gradient(to bottom, var(--color), transparent);
+            }
+            :root {
+                --color: #5a0000;
+                animation: red 2s infinite;
+            }
+            @keyframes red {
+                0% {
+                    --color: #ff3151;
+                }
+                50% {
+                    --color: #fff;
+                }
+                100% {
+                    --color: #ff3151;
+                }
             }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
