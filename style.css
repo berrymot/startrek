@@ -204,6 +204,7 @@ blockquote {
     border-left: 0.25rem solid var(--accentred);
     margin-left: 0;
     border-bottom-left-radius: 0.5rem;
+    overflow: hidden;
 }
 blockquote > :not(cite) {
     margin-left: 0.5rem;
