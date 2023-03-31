@@ -208,7 +208,7 @@ blockquote {
 cite {
     background: var(--accentred);
     display: block;
-    width: calc(100% + 0.5rem);
+    width: fit-content;
     position: relative;
     right: 0.5rem;
     padding: 0.25rem;
