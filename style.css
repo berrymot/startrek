@@ -202,15 +202,16 @@ del {
 }
 blockquote {
     border-left: 0.25rem solid var(--accentred);
-    padding-left: 0.5rem;
     margin-left: 0;
+    border-bottom-left-radius: 0.5rem;
+}
+blockquote > :not(cite) {
+    margin-left: 0.5rem;
 }
 cite {
     background: var(--accentred);
     display: block;
     width: fit-content;
-    position: relative;
-    right: 0.5rem;
     padding: 0.25rem 0.5rem 0.25rem 0.25rem;
     border-radius: 0 1rem 1rem 0;
 }
