@@ -206,8 +206,17 @@ blockquote {
     margin-left: 0;
 }
 cite {
-    font-size: 0.8em;
-    color: var(--accentred);
+    background: var(--accentred);
+    display: block;
+    width: calc(100% + 0.5rem);
+    position: relative;
+    right: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 0 1rem 1rem 0;
+}
+cite a {
+    color: var(--fg);
+    text-decoration: underline;
 }
 cite::before {
     content: "– ";
@@ -385,7 +394,7 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div
         --accentgreen: #068c59;
         --sel: #e6b877;
     }
-    div#left-top a, th:not(.subhead) {
+    div#left-top a, th:not(.subhead), cite, cite a {
         color: var(--bg);
     }
     body#redalert :is(div#frame, div#radius-container, div#left-top, div#bottom, div.meta) {
