@@ -214,13 +214,11 @@ cite {
     width: fit-content;
     padding: 0.25rem 0.5rem 0.25rem 0.25rem;
     border-radius: 0 1rem 1rem 0;
+    font-style: normal;
 }
 cite a {
     color: var(--fg);
     text-decoration: underline;
-}
-cite::before {
-    content: "– ";
 }
 div.twrap {
     max-width: 100%;
