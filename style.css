@@ -447,6 +447,9 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div.meta) {
         background-color: var(--frame);
     }
+    body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
+        background-color: var(--bg);
+    }
     * {
         animation: none !important;
         transition: none !important;
