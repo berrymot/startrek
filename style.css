@@ -356,7 +356,7 @@ body#redalert {
 body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div.meta) {
     animation: redalert 2s infinite;
 }
-body#redalert, body#redalert :is(#spacer, #content) {
+body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     animation: redalertbg 2s infinite;
 }
 @media (max-width: 600px) {
@@ -414,7 +414,7 @@ body#redalert, body#redalert :is(#spacer, #content) {
     body#redalert :is(div#frame, div#radius-container, div#left-top, div#bottom, div.meta) {
         animation: redalert-light 2s infinite;
     }
-    body#redalert, body#redalert :is(#spacer, #content) {
+    body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
         animation: redalertbg-light 2s infinite;
     }
     @keyframes redalert-light {
