@@ -331,6 +331,7 @@ mjx-container[display="true"] {
 }
 body#redalert {
     --frame: #5a0000;
+    --bg: #261316;
 }
 @keyframes redalert {
     0% {
