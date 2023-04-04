@@ -420,7 +420,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
         --frame: #cce5f1;
         --focus: #3d918b;
         --accentred: #ce2029;
-        --accentblue: #6388ad;
+        --accentblue: #2c70de;
         --accentgreen: #068c59;
     }
     ::selection {
