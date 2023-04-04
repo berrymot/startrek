@@ -399,6 +399,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
         min-height: 5rem;
         color: transparent !important;
         top: 2em;
+        border-top: 1px solid var(--fg);
     }
     div#bottom, div#spacer {
         height: 0;
