@@ -328,7 +328,6 @@ mjx-container[display="true"] {
     padding-left: 40px !important;
 }
 body#redalert {
-    --frame: #5a0000;
     --bg: #261316;
 }
 @keyframes redalert {
@@ -445,7 +444,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
 }
 @media (prefers-reduced-motion) {
     body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top, div.meta) {
-        background-color: var(--frame);
+        background-color: var(--accentred);
     }
     body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
         background-color: var(--bg);
