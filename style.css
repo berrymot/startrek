@@ -206,14 +206,12 @@ blockquote {
 }
 cite {
     color: var(--accentred);
+    font-weight: bold;
     display: block;
     width: fit-content;
     margin-left: auto;
-    padding: 0.25rem 0.5rem;
-    border-radius: 1rem;
 }
 cite a {
-    color: var(--fg);
     text-decoration: underline;
 }
 div.twrap {
