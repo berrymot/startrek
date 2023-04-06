@@ -45,7 +45,7 @@
                     <li>You can append <code>?s=</code> followed by a stardate to the URL to automatically convert that stardate.</li>
                 </ul>
                 <h2>Earth &rarr; Stardate</h2>
-                <input type="date" id="date" value="2323-01-01" />
+                <input type="date" id="date" value="2023-01-01" />
                 <input type="time" id="time" value="00:00:00.000" step="0.001" />
                 <button onclick="calc()">Calculate</button>
                 <p id="stardate"></p>
@@ -56,6 +56,9 @@
                 <script>
                     var qs = window.location.search;
                     var par = new URLSearchParams(qs);
+                    const fill = new Date().toISOString();
+                    document.getElementById("date").value = fill.split(/T|Z/)[0];
+                    document.getElementById("time").value = fill.split(/T|Z/)[1];
                     if (par.has("s") && par.get("s") != "") {
                         document.getElementById("stardate2").value = par.get("s");
                         uncalc();
