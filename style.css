@@ -430,7 +430,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     ::selection {
         background-color: #e6b87760;
     }
-    div#left-top a, th:not(.subhead), cite, cite a {
+    div#left-top a, th:not(.subhead) {
         color: var(--bg);
     }
     body#redalert :is(div#frame, div#radius-container, div#left-top, div#bottom, div.meta) {
