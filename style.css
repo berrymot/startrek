@@ -23,7 +23,7 @@ body {
     color: var(--fg);
     margin: 0;
     padding: 0;
-    font-family: "Noto Sans", "Alegreya Sans", sans-serif;
+    font-family: "Alegreya Sans", "Noto Sans", sans-serif;
     min-height: 100vh;
     line-height: 1.5;
     scrollbar-color: var(--accentblue) transparent;
@@ -172,13 +172,13 @@ code {
     background-color: var(--frame);
     padding: 0.25rem;
     border-radius: 0.25rem;
-    font-family: "Noto Sans Mono", "Inconsolata", monospace;
+    font-family: "Inconsolata", "Noto Sans Mono", monospace;
 }
 pre {
     background-color: var(--frame);
     padding: 0.25rem;
     border-radius: 0.25rem;
-    font-family: "Noto Sans Mono", "Inconsolata", monospace;
+    font-family: "Inconsolata", "Noto Sans Mono", monospace;
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -200,7 +200,7 @@ del {
     color: var(--accentred);
 }
 blockquote {
-    font-family: "Noto Serif", "Alegreya", serif;
+    font-family: "Alegreya", "Noto Serif", serif;
 }
 cite {
     background: var(--accentred);
