@@ -26,6 +26,18 @@ body {
     font-family: "Noto Sans", sans-serif;
     min-height: 100vh;
     line-height: 1.5;
+    scrollbar-color: var(--accentblue) var(--frame);
+    scrollbar-width: 5px;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--frame);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--accentblue);
 }
 div#left-top {
     background-color: var(--frame);
@@ -326,13 +338,19 @@ hr {
     border: 0;
     border-top: 2px solid var(--frame);
 }
-.green { color: var(--accentgreen); }
+.green {
+    color: var(--accentgreen);
+}
 mjx-container[display="true"] {
     text-align: left !important;
     padding-left: 40px !important;
 }
 body#redalert {
     --bg: #261316;
+    scrollbar-color: var(--accentred) var(--frame);
+}
+body#redalert::-webkit-scrollbar-thumb {
+    background-color: var(--accentred);
 }
 @keyframes redalert {
     0% {
