@@ -325,6 +325,9 @@ hr {
 .green {
     color: var(--accentgreen);
 }
+.center {
+    text-align: center;
+}
 mjx-container[display="true"] {
     text-align: left !important;
     padding-left: 40px !important;
