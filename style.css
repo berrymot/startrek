@@ -209,9 +209,8 @@ cite {
     display: block;
     text-align: right;
     width: fit-content;
-    padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 1rem;
-    font-style: normal;
 }
 cite a {
     color: var(--fg);
