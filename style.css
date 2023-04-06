@@ -201,13 +201,16 @@ del {
 }
 blockquote {
     font-family: "Alegreya", "Noto Serif", serif;
+    width: fit-content;
+    max-width: calc(100% - 80px);
 }
 cite {
     background: var(--accentred);
     display: block;
+    text-align: right;
     width: fit-content;
     padding: 0.25rem 0.5rem 0.25rem 0.25rem;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 1rem;
     font-style: normal;
 }
 cite a {
