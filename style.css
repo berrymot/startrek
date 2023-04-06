@@ -201,10 +201,6 @@ pre mark {
 }
 a {
     color: var(--accentblue);
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
 }
 strong, em {
     color: var(--focus);
