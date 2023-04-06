@@ -45,7 +45,6 @@ div#left-top {
     width: 8rem;
     height: 6rem;
     overflow-x: visible;
-    transition: width 0.25s cubic-bezier(0.23, 1, 0.32, 1), color 0.25s cubic-bezier(0.23, 1, 0.32, 1), border-radius 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 div#left-top a {
     text-decoration: none;
@@ -61,7 +60,6 @@ div#left-top a {
     width: 100%;
     position: relative;
     top: 0;
-    transition: min-height 0.25s cubic-bezier(0.23, 1, 0.32, 1), color 0.25s cubic-bezier(0.23, 1, 0.32, 1), width 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1);
     overflow-wrap: break-word;
 }
 div#left-top a:is(:hover, :active) {
@@ -80,7 +78,6 @@ h1 {
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    transition: left 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 h1::-webkit-scrollbar {
     display: none;
@@ -91,7 +88,6 @@ div.meta {
     left: -8rem;
     background-color: var(--frame);
     border-bottom: 1px solid var(--fg);
-    transition: left 0.25s cubic-bezier(0.23, 1, 0.32, 1), width 0.25s cubic-bezier(0.23, 1, 0.32, 1), height 0.25s cubic-bezier(0.23, 1, 0.32, 1), border-radius 0.25s cubic-bezier(0.23, 1, 0.32, 1);
     line-height: initial;
 }
 div.meta, div.meta-content {
@@ -106,7 +102,6 @@ div#frame .meta-content {
     width: 8rem;
     text-align: right;
     float: left;
-    transition: height 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 div#frame .meta:is(:hover, :active, :focus, :focus-within) {
     border: 0;
@@ -124,7 +119,6 @@ div#frame .meta:is(:hover, :active, :focus, :focus-within) {
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    transition: width 0.25s cubic-bezier(0.23, 1, 0.32, 1), height 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .meta-content::-webkit-scrollbar {
     display: none;
@@ -141,7 +135,6 @@ div#bottom {
     background-color: var(--frame);
     margin-top: -1rem;
     border-radius: 0 0 0 2rem;
-    transition: height 0.25s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 div#radius-container {
     width: calc(100% - 8rem);
@@ -150,7 +143,6 @@ div#radius-container {
     position: relative;
     left: 8rem;
     top: -0.5rem;
-    transition: width 0.25s cubic-bezier(0.23, 1, 0.32, 1), left 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1), height 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 div#radius {
     width: 100%;
@@ -160,25 +152,21 @@ div#radius {
     position: absolute;
     left: 0;
     top: 0;
-    transition: border-radius 0.25s cubic-bezier(0.23, 1, 0.32, 1), margin-top 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 div#frame {
     padding: 1rem 0 0 8rem;
-    transition: padding 0.25s cubic-bezier(0.23, 1, 0.32, 1), border-radius 0.25s cubic-bezier(0.23, 1, 0.32, 1);
     background: var(--frame);
     border-radius: 2rem 0 0 0;
 }
 div#spacer {
     height: 1em;
     background-color: var(--bg);
-    transition: height 0.25s cubic-bezier(0.23, 1, 0.32, 1), backgrouned-color 0.25s cubic-bezier(0.23, 1, 0.32, 1),;
 }
 div#content {
     background-color: var(--bg);
     padding: 1rem;
     border-radius: 1rem 0 0 0;
     min-height: calc(100vh - 10rem);
-    transition: min-height 0.25s cubic-bezier(0.23, 1, 0.32, 1), border-radius 0.25s cubic-bezier(0.23, 1, 0.32, 1)
 }
 code {
     background-color: var(--frame);
@@ -485,6 +473,5 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     }
     * {
         animation: none !important;
-        transition: none !important;
     }
 }
