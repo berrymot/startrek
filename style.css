@@ -205,10 +205,10 @@ blockquote {
     max-width: calc(100% - 80px);
 }
 cite {
-    background: var(--accentred);
+    color: var(--accentred);
     display: block;
-    text-align: right;
     width: fit-content;
+    margin-left: auto;
     padding: 0.25rem 0.5rem;
     border-radius: 1rem;
 }
