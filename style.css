@@ -1,3 +1,44 @@
+/* fonts */
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/Alegreya-Regular.ttf");
+    font-family: "Alegreya";
+}
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/Alegreya-Italic.ttf");
+    font-family: "Alegreya";
+    font-style: italic;
+}
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/Alegreya-Bold.ttf");
+    font-family: "Alegreya";
+    font-weight: bold;
+}
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/Alegreya-BoldItalic.ttf");
+    font-family: "Alegreya";
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/AlegreyaSans-Regular.ttf");
+    font-family: "Alegreya Sans";
+}
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/AlegreyaSans-Italic.ttf");
+    font-family: "Alegreya Sans";
+    font-style: italic;
+}
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/AlegreyaSans-Bold.ttf");
+    font-family: "Alegreya Sans";
+    font-weight: bold;
+}
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/AlegreyaSans-BoldItalic.ttf");
+    font-family: "Alegreya Sans";
+    font-style: italic;
+    font-weight: bold;
+}
 /* stuff */
 :root {
     --bg: #10191f;
