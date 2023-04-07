@@ -221,17 +221,13 @@ div#content {
     border-radius: 1rem 0 0 0;
     min-height: calc(100vh - 10rem);
 }
-code {
+code, pre {
     background-color: var(--frame);
-    padding: 0.25rem;
+    padding: 0.125rem;
     border-radius: 0.25rem;
     font-family: var(--mono);
 }
 pre {
-    background-color: var(--frame);
-    padding: 0.25rem;
-    border-radius: 0.25rem;
-    font-family: var(--mono);
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
