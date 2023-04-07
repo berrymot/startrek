@@ -54,7 +54,7 @@
                             function utc() {
                                 var date = document.getElementById("utcd").value;
                                 var time = document.getElementById("utct").value;
-                                var tz = document.getElementById("utct").value;
+                                var tz = document.getElementById("utcz").value;
                                 var local = new Date(date + "T" + time + tz);
                                 var utc = new Date(local.getTime() + (local.getTimezoneOffset() * 60000));
                                 document.getElementById("utc").innerHTML = utc.toISOString().replace("T", " ").replace("Z", "");
