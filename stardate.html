@@ -43,7 +43,23 @@
                     <li>JavaScript has a maximum date of <a href="https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs#Year_275,760">Sep 13, 275760</a> and cannot represent dates after that.</li>
                     <li>The "Stardate &rarr; Earth" outputs in the format <code>yyyy-mm-dd hh:mm:ss</code>.</li>
                     <li>You can append <code>?s=</code> followed by a stardate to the URL to automatically convert that stardate.</li>
-                    <li>The input boxes pre-fill with the current <b>UTC</b> time.</p>
+                    <li>The input boxes pre-fill with the current <b>UTC</b> time. This makes sense for what the Federation would use because it's already standardized and everyone is in space anyway. Here's a converter. (Don't know what your UTC offset is? Search your location on <a href="https://time.is">time.is</a> and scroll down a bit.)
+                        <input type="date" id="utcd" value="2023-01-01">
+                        <input type="time" id="utct" value="00:00:00.000" step="0.001">
+                        <input type="text" id="utcz" value="-07:00">
+                        <button onclick="convert()">convert</button>
+                        <p id="utc"></p>
+                        <script>
+                            function utc() {
+                                var date = document.getElementById("utcd").value;
+                                var time = document.getElementById("utct").value;
+                                var tz = document.getElementById("utct").value;
+                                var local = new Date(date + "T" + time + tz);
+                                var utc = new Date(local.getTime() + (local.getTimezoneOffset() * 60000));
+                                document.getElementById("utc").innerHTML = utc.toISOString().replace("T", " ").replace("Z", "");
+                            }
+                        </script>
+                    </li>
                 </ul>
                 <h2>Earth &rarr; Stardate</h2>
                 <input type="date" id="date" value="2023-01-01" />
