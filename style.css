@@ -370,6 +370,15 @@ hr {
 .center {
     text-align: center;
 }
+.serif {
+    font-family: var(--serif);
+}
+.sans {
+    font-family: var(--sans);
+}
+.mono {
+    font-family: var(--mono);
+}
 mjx-container[display="true"] {
     text-align: left !important;
     padding-left: 40px !important;
