@@ -40,12 +40,23 @@
     font-weight: bold;
 }
 @font-face {
-    src: url("https://berrymot.github.io/startrek/fonts/Inconsolata-Regular.ttf");
+    src: url("https://berrymot.github.io/startrek/fonts/InconsolataLGC-Regular.ttf");
     font-family: "Inconsolata";
 }
 @font-face {
-    src: url("https://berrymot.github.io/startrek/fonts/Inconsolata-Bold.ttf");
+    src: url("https://berrymot.github.io/startrek/fonts/InconsolataLGC-Italic.ttf");
     font-family: "Inconsolata";
+    font-style: italic;
+}
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/InconsolataLGC-Bold.ttf");
+    font-family: "Inconsolata";
+    font-weight: bold;
+}
+@font-face {
+    src: url("https://berrymot.github.io/startrek/fonts/InconsolataLGC-BoldItalic.ttf");
+    font-family: "Inconsolata";
+    font-style: italic;
     font-weight: bold;
 }
 /* stuff */
