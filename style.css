@@ -297,7 +297,6 @@ th, td {
     background-color: var(--bg);
     vertical-align: baseline;
     white-space: nowrap;
-    font-feature-settings: "lnum", "tnum";
 }
 th {
     font-weight: bold;
