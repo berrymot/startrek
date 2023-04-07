@@ -161,7 +161,7 @@ div#frame .meta:is(:hover, :active, :focus, :focus-within) {
     border: 0;
 }
 div.meta-content {
-    color: var(--accentred);
+    color: var(--accentblue);
     padding: 0.25rem;
     padding-top: calc(0.25rem - 1px);
     background-color: var(--bg);
