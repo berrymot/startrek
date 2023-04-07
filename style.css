@@ -250,15 +250,11 @@ del {
 }
 blockquote {
     font-family: var(--serif);
-    width: fit-content;
-    max-width: calc(100% - 80px);
 }
 cite {
     color: var(--accentred);
     font-weight: bold;
     display: block;
-    width: fit-content;
-    margin-left: auto;
 }
 cite a {
     text-decoration: underline;
