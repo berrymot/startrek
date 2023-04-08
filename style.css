@@ -355,6 +355,7 @@ input, button, textarea, select, option {
     padding: 0.25rem 0.5rem;
     font-family: var(--mono);
     box-sizing: content-box !important;
+    font-size: 0.8em;
 }
 ::-webkit-calendar-picker-indicator {
     display: none;
