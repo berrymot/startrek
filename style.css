@@ -248,6 +248,7 @@ code, pre {
     padding: 0.125rem;
     border-radius: 0.25rem;
     font-family: var(--mono);
+    font-size: 0.8em;
 }
 pre {
     overflow-x: auto;
