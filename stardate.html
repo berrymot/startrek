@@ -69,9 +69,9 @@
                                         var tzm = tz.substring(1).split(":")[1];
                                         var tzo = tzs * ((tzh * 3600) + (tzm * 60));
                                         var local = new Date(date + "T" + time + tz);
-                                        console.log(local.toUTCString());
                                         var utc = new Date(local.getTime() - tzo * 1000);
-                                        document.getElementById("utc").innerHTML = utc.toISOString().split("T")[0] + "&nbsp;" + utc.toString().split(" ")[4];
+                                        console.log(local.toUTCString(), " ### " utc.toISOString());
+                                        document.getElementById("utc").innerHTML = utc.toISOString().split("T")[0] + "&nbsp;" + local.toString().split(" ")[4];
                                     }
                                 </script>
                             </li>
