@@ -348,7 +348,7 @@ div.links a::before {
 input, button, textarea, select, option {
     appearance: none;
     background-color: var(--bg);
-    border: 1px solid var(--fg);
+    border: 1px solid currentcolor;
     border-radius: 0.25rem;
     color: var(--fg);
     padding: 0.25rem 0.5rem;
@@ -364,8 +364,7 @@ input, button, textarea, select, option {
 }
 button {
     cursor: pointer;
-    background-color: var(--accentblue);
-    color: var(--fg);
+    color: var(--accentblue);
     font-weight: bold;
 }
 [disabled] {
