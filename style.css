@@ -401,6 +401,7 @@ hr {
 }
 .mono {
     font-family: var(--mono);
+    font-size: 0.8em;
 }
 mjx-container[display="true"] {
     text-align: left !important;
