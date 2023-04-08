@@ -353,7 +353,7 @@ input, button, textarea, select, option {
     color: var(--fg);
     padding: 0.25rem 0.5rem;
     font-family: var(--mono);
-    box-sizing: context-box !important;
+    box-sizing: content-box !important;
 }
 ::-webkit-calendar-picker-indicator {
     display: none;
