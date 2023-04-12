@@ -79,7 +79,8 @@
                 </ul>
                 <h2>Earth &rarr; Stardate</h2>
                 <input type="date" id="date" value="2023-01-01" />
-                <input type="time" id="time" value="00:00:00.000000000" step="0.000000001" />
+                <input type="time" id="time" value="00:00:00.000" step="0.001" />
+                +&nbsp;<input type="number" id="nano" value="0" min="0" max="999999999" style="width:9ch" step="1" />&nbsp;nanoseconds
                 <button onclick="calc()">Calculate</button>
                 <p id="stardate"></p>
                 <h2>Stardate &rarr; Earth</h2>
@@ -117,7 +118,7 @@
                         var min = parseInt(document.getElementById("time").value.split(":")[1]);
                         var s = parseInt(document.getElementById("time").value.split(":")[2]);
                         if (isNaN(s)) s = 0;
-                        var ss = parseInt(document.getElementById("time").value.split(".")[1]);
+                        var ns = parseInt(document.getElementById("nano").value);
                         if (isNaN(ss)) ss = 0;
                         var ml = [31, 28 + leap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
                         var ms /* month starts */ = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
@@ -128,7 +129,7 @@
                             }
                         }
                         var doy = ms[m - 1] + d - 1;
-                        var ed = y + (doy + h / 24 + min / 1440 + s / 86400 + ss / 86400000000000) / yl;
+                        var ed = y + (doy + h / 24 + min / 1440 + s / 86400 + ns / 86400000000000) / yl;
                         var sd = 1000 * (ed - 2323);
                         document.getElementById("stardate").innerHTML = sd;
                     }
@@ -148,7 +149,7 @@
                         var h = Math.floor(f * 24 * yl) % 24;
                         var min = Math.floor(f * 1440 * yl) % 60;
                         var s = Math.floor(f * 86400 * yl) % 60;
-                        var ss = Math.floor((1000 * ((f * 86400 * yl) % 60 - s)));
+                        var ns = Math.floor(f * 86400000000000 * yl) % 1000000000;
                         var ml = [31, 28 + leap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
                         var ms = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
                         if (leap(y)) {
@@ -167,7 +168,7 @@
                         h = String(h).padStart(2, "0");
                         min = String(min).padStart(2, "0");
                         s = String(s).padStart(2, "0");
-                        ss = String(ss).padStart(3, "0");
+                        ns = String(ss).padStart(9, "0");
                         document.getElementById("date2").innerHTML = y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s + "." + ss;
                     }
                 </script>        
