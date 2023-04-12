@@ -55,7 +55,7 @@
                                 <p>
                                     <input type="date" id="utcd" value="2023-01-01" />
                                     <input type="time" id="utct" value="00:00:00" step="1" />
-                                    <input type="text" id="utcz" value="-07:00" maxlength="6" style="width:6ch" pattern="[-+]\d{2}:\d{2}" />
+                                    <input type="text" id="utcz" value="-07:00" maxlength="6" style="width:6ch" pattern="[\-+]\d{2}:\d{2}" />
                                     <button onclick="utc()">Convert</button>
                                     <span id="utc"></span>
                                 </p>
@@ -83,7 +83,7 @@
                 <button onclick="calc()">Calculate</button>
                 <p id="stardate"></p>
                 <h2>Stardate &rarr; Earth</h2>
-                <input type="text" id="stardate2" value="0" maxlength="19" style="width:19ch" pattern="[-+]?\d*(\.\d*)?" />
+                <input type="text" id="stardate2" value="0" maxlength="19" style="width:19ch" pattern="[\-+]?\d*(\.\d*)?" />
                 <button onclick="uncalc()">Calculate</button>
                 <p id="date2"></p>
                 <script>
