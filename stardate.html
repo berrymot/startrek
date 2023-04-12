@@ -79,7 +79,7 @@
                 </ul>
                 <h2>Earth &rarr; Stardate</h2>
                 <input type="date" id="date" value="2023-01-01" />
-                <input type="time" id="time" value="00:00:00.000" step="0.001" />
+                <input type="time" id="time" value="00:00:00.000000000" step="0.000000001" />
                 <button onclick="calc()">Calculate</button>
                 <p id="stardate"></p>
                 <h2>Stardate &rarr; Earth</h2>
@@ -128,7 +128,7 @@
                             }
                         }
                         var doy = ms[m - 1] + d - 1;
-                        var ed = y + (doy + h / 24 + min / 1440 + s / 86400 + ss / 86400000) / yl;
+                        var ed = y + (doy + h / 24 + min / 1440 + s / 86400 + ss / 86400000000000) / yl;
                         var sd = 1000 * (ed - 2323);
                         document.getElementById("stardate").innerHTML = sd;
                     }
@@ -141,7 +141,7 @@
                         var f = "0." + v[1];
                         var yl = 365 + leap(y);
                         if (f == 0) {
-                            document.getElementById("date2").innerHTML = y + "-01-01 00:00:00.000";
+                            document.getElementById("date2").innerHTML = y + "-01-01 00:00:00.000000000";
                             return;
                         }
                         var doy = Math.floor(f * yl) % yl;
