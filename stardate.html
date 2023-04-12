@@ -119,7 +119,7 @@
                         var s = parseInt(document.getElementById("time").value.split(":")[2]);
                         if (isNaN(s)) s = 0;
                         var ns = parseInt(document.getElementById("nano").value);
-                        if (isNaN(ss)) ss = 0;
+                        if (isNaN(ns)) ns = 0;
                         var ml = [31, 28 + leap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
                         var ms /* month starts */ = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
                         var yl = 365 + leap(y);
@@ -168,7 +168,7 @@
                         h = String(h).padStart(2, "0");
                         min = String(min).padStart(2, "0");
                         s = String(s).padStart(2, "0");
-                        ns = String(ss).padStart(9, "0");
+                        ns = String(ns).padStart(9, "0");
                         document.getElementById("date2").innerHTML = y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s + "." + ss;
                     }
                 </script>        
