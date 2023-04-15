@@ -62,6 +62,7 @@
 /* stuff */
 :root {
     --bg: #10191f;
+    --xbg: #102837;
     --fg: #ffffff;
     --accentred: #ff3151;
     --accentblue: #30b5e6;
@@ -328,6 +329,9 @@ th {
 th.subhead {
     background-color: var(--frame);
 }
+td.ref {
+    background: var(--xbg);
+}
 div.links {
     margin: 1rem 0;
     padding-left: 40px;
@@ -409,6 +413,7 @@ mjx-container[display="true"] {
 }
 body#redalert {
     --bg: #261316;
+    --xbg: #4a1820;
     scrollbar-color: var(--accentred) var(--frame);
 }
 body#redalert::-webkit-scrollbar-thumb {
@@ -497,6 +502,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     /* thanks beefox */
     :root, body#redalert {
         --bg: #f9fcfe;
+        --xbg: #f2f8fc;
         --fg: #222;
         --frame: #cce5f1;
         --focus: #3d918b;
