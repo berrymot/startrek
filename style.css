@@ -332,23 +332,12 @@ th.subhead {
 td.ref {
     background: var(--xbg);
 }
-div.links {
-    margin: 1rem 0;
-    padding-left: 40px;
-}
-div.links a {
+ul.links a {
     font-weight: bold;
     text-decoration: none;
-    margin: 0.5rem 0;
-    display: block;
-    width: fit-content;
 }
-div.links a:hover {
+ul.links a:hover {
     text-decoration: underline;
-}
-div.links a::before {
-    content: "› ";
-    color: var(--fg);
 }
 input, button, textarea, select, option {
     appearance: none;
