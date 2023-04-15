@@ -402,7 +402,6 @@ mjx-container[display="true"] {
 }
 body#redalert {
     --bg: #261316;
-    --xbg: #611b26;
     scrollbar-color: var(--accentred) var(--frame);
 }
 body#redalert::-webkit-scrollbar-thumb {
