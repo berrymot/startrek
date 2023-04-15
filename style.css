@@ -62,7 +62,7 @@
 /* stuff */
 :root {
     --bg: #10191f;
-    --xbg: #102837;
+    --xbg: #103147;
     --fg: #ffffff;
     --accentred: #ff3151;
     --accentblue: #30b5e6;
@@ -402,7 +402,7 @@ mjx-container[display="true"] {
 }
 body#redalert {
     --bg: #261316;
-    --xbg: #4a1820;
+    --xbg: #611b26;
     scrollbar-color: var(--accentred) var(--frame);
 }
 body#redalert::-webkit-scrollbar-thumb {
@@ -491,7 +491,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     /* thanks beefox */
     :root, body#redalert {
         --bg: #f9fcfe;
-        --xbg: #f2f8fc;
+        --xbg: #edf6fa;
         --fg: #222;
         --frame: #cce5f1;
         --focus: #3d918b;
