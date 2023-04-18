@@ -131,6 +131,7 @@ div#left-top a, div#frame > a {
 div#frame > a {
     position: absolute;
     top: 11rem;
+    left: 0;
     width: 8rem;
 }
 span.s {
