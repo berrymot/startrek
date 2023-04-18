@@ -133,6 +133,7 @@ div#frame > a {
     top: 11rem;
     left: 0;
     width: 8rem;
+    border-top: 1px solid var(--fg);
 }
 span.s {
     display: none;
@@ -520,7 +521,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     ::selection {
         background-color: #e6b87760;
     }
-    div#left-top a, th:not(.subhead) {
+    div#left-top a, th:not(.subhead), div#frame > a {
         color: var(--bg);
     }
     body#redalert :is(div#frame, div#radius-container, div#left-top, div#bottom, div.meta) {
