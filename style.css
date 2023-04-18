@@ -476,10 +476,16 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
         left: 3rem;
         top: 2.5rem;
     }
-    div#left-top a, div#frame > a {
+    div#left-top a {
         min-height: 5rem;
         top: 2em;
         border-top: 1px solid var(--fg);
+    }
+    div#frame > a {
+        position: absolute;
+        height: 1.5rem;
+        top: 7rem;
+        left: 0;
     }
     div#bottom, div#spacer {
         height: 0;
