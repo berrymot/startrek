@@ -69,7 +69,6 @@
     --accentgreen: #12d799;
     --frame: #1070b0;
     --focus: #bee037;
-    scroll-behavior: smooth;
     --sans: "Alegreya Sans", "Noto Sans", sans-serif;
     --serif: "Alegreya", "Noto Serif", serif;
     --mono: "Inconsolata", "Noto Sans Mono", monospace;
@@ -452,9 +451,8 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     span.s {
         display: inline;
     }
-    div#left-top, div#left-top * {
+    div#left-top, div#left-top *, div#frame > a {
         width: 2rem;
-        color: transparent;
     }
     div.meta, div.meta-content {
         height: 0;
@@ -478,9 +476,8 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
         left: 3rem;
         top: 2.5rem;
     }
-    div#left-top a {
+    div#left-top a, div#frame > a {
         min-height: 5rem;
-        color: transparent !important;
         top: 2em;
         border-top: 1px solid var(--fg);
     }
