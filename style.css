@@ -131,7 +131,7 @@ div#left-top a, div#frame > a {
 span.s {
     display: none;
 }
-:is(div#left-top, div#frame > a) a:is(:hover, :active) {
+:is(div#left-top, div#frame) > a:is(:hover, :active) {
     background-color: var(--accentred);
 }
 h1 {
