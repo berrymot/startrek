@@ -128,17 +128,10 @@ div#left-top a, div#frame > a {
     overflow-wrap: break-word;
     transition: min-height 0.25s cubic-bezier(0.23, 1, 0.32, 1), color 0.25s cubic-bezier(0.23, 1, 0.32, 1), width 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
-div#frame > a {
-    position: absolute;
-    top: 11rem;
-    left: 0;
-    width: 8rem;
-    border-top: 1px solid var(--fg);
-}
 span.s {
     display: none;
 }
-:is(div#left-top, div#frame) > a:is(:hover, :active) {
+div#left-top a:is(:hover, :active) {
     background-color: var(--accentred);
 }
 h1 {
@@ -250,8 +243,7 @@ div#content {
     background-color: var(--bg);
     padding: 1rem;
     border-radius: 1rem 0 0 0;
-    height: calc(100vh - 10rem);
-    overflow-y: auto;
+    min-height: calc(100vh - 10rem);
     transition: min-height 0.25s cubic-bezier(0.23, 1, 0.32, 1), border-radius 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 code, pre {
@@ -458,7 +450,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     span.s {
         display: inline;
     }
-    div#left-top, div#left-top *, div#frame > a {
+    div#left-top, div#left-top * {
         width: 2rem;
     }
     div.meta, div.meta-content {
@@ -497,7 +489,6 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     }
     div#bottom, div#spacer {
         height: 0;
-        background-color: var(--bg);
     }
     div#content {
         min-height: calc(100vh - 8rem);
@@ -522,7 +513,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     ::selection {
         background-color: #e6b87760;
     }
-    div#left-top a, th:not(.subhead), div#frame > a {
+    div#left-top a, th:not(.subhead) {
         color: var(--bg);
     }
     body#redalert :is(div#frame, div#radius-container, div#left-top, div#bottom, div.meta) {
