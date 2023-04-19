@@ -111,7 +111,7 @@ div#left-top {
     overflow-x: visible;
     transition: width 0.25s cubic-bezier(0.23, 1, 0.32, 1), color 0.25s cubic-bezier(0.23, 1, 0.32, 1), border-radius 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
-div#left-top a, div#frame > a {
+div#left-top a {
     text-decoration: none;
     display: block;
     border-bottom: 1px solid var(--fg);
@@ -479,13 +479,6 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
         min-height: 5rem;
         top: 2em;
         border-top: 1px solid var(--fg);
-    }
-    div#frame > a {
-        position: absolute;
-        height: 1.5rem;
-        top: 7rem;
-        left: 0;
-        border-top: none;
     }
     div#bottom, div#spacer {
         height: 0;
