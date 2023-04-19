@@ -34,12 +34,7 @@
                             <li>For some reason, <i>Lower Decks</i> uses a variant on this. I haven't found what the formula is, but it's just a difference of a few months.</li>
                         </ul>
                     </li>
-                    <li>The stardates in the "LAST REVISION" sections in the top left use 2000 as the base instead of 2323. To get these,
-                        <ul>
-                            <li>If you start with an Earth date: add 323000 to the stardate you get</li>
-                            <li>If you start with a stardate: subtract 323000 before converting</li>
-                        </ul>
-                    </li>
+                    <li>The stardates in the "LAST REVISION" sections in the top left use 2000 as the base instead of 2323.</li>
                     <li>JavaScript has a maximum date of <a href="https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs#Year_275,760">Sep 13, 275760</a> and cannot represent dates after that.</li>
                     <li>The "Stardate &rarr; Earth" outputs in the format <code>yyyy-mm-dd hh:mm:ss</code>.</li>
                     <li>You can append <code>?s=</code> followed by a stardate to the URL to automatically convert that stardate.</li>
@@ -77,6 +72,7 @@
                         </ul>
                     </li>
                 </ul>
+                <hr />
                 <h2>Earth &rarr; Stardate</h2>
                 <input type="date" id="date" value="2023-01-01" />
                 <input type="time" id="time" value="00:00:00.000" step="0.001" />
