@@ -31,7 +31,7 @@
         <div id="spacer"></div>
         <div id="frame">
             <div id="content">
-                <h2>Misc. notes (<a href="javascript:document.getElementById('notes').classList.toggle('hide');">show/hide</a>)</h2>
+                <h2>Misc. notes <button id="btn" onclick="notes()">show/hide</button></h2>
                 <ul id="notes">
                     <li>Uses the TNG-era(-onward, incl. DISs3 etc.) stardate system, where 2323 = stardate 0.
                         <ul>
@@ -77,6 +77,12 @@
                         </ul>
                     </li>
                 </ul>
+                <script>
+                    function notes() {
+                        document.getElementById("notes").classList.toggle("hide");
+                        document.getElementById("btn").textContent = document.getElementById("notes").classList.contains("hide") ? "show" : "hide";
+                    }
+                </script>
                 <hr />
                 <h2>Earth &rarr; Stardate</h2>
                 <input type="date" id="date" value="2023-01-01" />
