@@ -161,11 +161,11 @@ div#bottom {
     transition: height 0.25s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 div#radius-container {
-    width: calc(100% - 8rem);
+    width: 94%;
     height: 1rem;
     background-color: var(--frame);
     position: relative;
-    left: 8rem;
+    left: 6%;
     top: -0.5rem;
     transition: width 0.25s cubic-bezier(0.23, 1, 0.32, 1), left 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1), height 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -388,18 +388,20 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top) {
 body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     animation: redalertbg 2s infinite;
 }
+@media (max-width: 1000px) {
+    span.l {
+        display: none;
+    }
+    span.s {
+        display: inline;
+    }
+}
 @media (max-width: 600px) {
     div#frame {
         padding-left: 2rem;
         border-radius: 0 0 0 1.5rem;
         padding-bottom: 1rem;
         padding-top: 0;
-    }
-    span.l {
-        display: none;
-    }
-    span.s {
-        display: inline;
     }
     div#left-top, div#left-top * {
         width: 2rem;
