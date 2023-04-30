@@ -21,48 +21,32 @@
             <div id="content">
                 <h2>Misc. notes <button id="btn" onclick="notes()">show</button></h2>
                 <ul id="notes" class="hide">
-                    <li>Uses the TNG-era(-onward, incl. DISs3 etc.) stardate system, where 2323 = stardate 0.
-                        <ul>
-                            <li>TOS-era stardates are just sorta random.</li>
-                            <li>For some reason, <i>Lower Decks</i> uses a variant on this. I haven't found what the formula is, but it's just a difference of a few months.</li>
-                        </ul>
-                    </li>
-                    <li>The stardates in the "LAST REVISION" sections in the top left use 2000 as the base instead of 2323.</li>
+                    <li>Uses the TNG-era(-onward, incl. DISs3 etc.) stardate system, where 2323 = stardate 0.</li>
                     <li>JavaScript has a maximum date of <a href="https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs#Year_275,760">Sep 13, 275760</a> and cannot represent dates after that.</li>
                     <li>The "Stardate &rarr; Earth" outputs in the format <code>yyyy-mm-dd hh:mm:ss</code>.</li>
                     <li>You can append <code>?s=</code> followed by a stardate to the URL to automatically convert that stardate.</li>
-                    <li>The input boxes pre-fill with the current <b>UTC</b> time.
-                        <ul>
-                            <li>This makes sense for the Federation because
-                                <ul>
-                                    <li>it's already standardized</li>
-                                    <li>it is called <i>Universal</i> Coordinated Time (though the initialism is broken because French)</li>
-                                </ul>
-                            </li>
-                            <li>Here's a converter. (Don't know what your UTC offset is? Search your location on <a href="https://time.is">time.is</a> and scroll down a bit.)
-                                <p>
-                                    <input type="date" id="utcd" value="2023-01-01" />
-                                    <input type="time" id="utct" value="00:00:00" step="1" />
-                                    <input type="text" id="utcz" value="-07:00" maxlength="6" style="width:6ch" pattern="[\-+]\d{2}:\d{2}" />
-                                    <button onclick="utc()">Convert</button>
-                                    <span id="utc"></span>
-                                </p>
-                                <script>
-                                    function utc() {
-                                        var date = document.getElementById("utcd").value;
-                                        var time = document.getElementById("utct").value;
-                                        var tz = document.getElementById("utcz").value;
-                                        var tzs = Number(tz.substring(0, 1) + "1");
-                                        var tzh = tz.substring(1).split(":")[0];
-                                        var tzm = tz.substring(1).split(":")[1];
-                                        var tzo = tzs * ((tzh * 3600) + (tzm * 60));
-                                        var local = new Date(date + "T" + time + tz);
-                                        var utc = new Date(local.getTime() - tzo * 1000);
-                                        document.getElementById("utc").innerHTML = utc.toISOString().split("T")[0] + "&nbsp;" + local.toUTCString().split(" ")[4];
-                                    }
-                                </script>
-                            </li>
-                        </ul>
+                    <li>The input boxes pre-fill with the current <b>UTC</b> time. Here's a converter to it. (Don't know what your UTC offset is? Search your location on <a href="https://time.is">time.is</a> and scroll down a bit.)
+                        <p>
+                            <input type="date" id="utcd" value="2023-01-01" />
+                            <input type="time" id="utct" value="00:00:00" step="1" />
+                            <input type="text" id="utcz" value="-07:00" maxlength="6" style="width:6ch" pattern="[\-+]\d{2}:\d{2}" />
+                            <button onclick="utc()">Convert</button>
+                            <span id="utc"></span>
+                        </p>
+                        <script>
+                            function utc() {
+                                var date = document.getElementById("utcd").value;
+                                var time = document.getElementById("utct").value;
+                                var tz = document.getElementById("utcz").value;
+                                var tzs = Number(tz.substring(0, 1) + "1");
+                                var tzh = tz.substring(1).split(":")[0];
+                                var tzm = tz.substring(1).split(":")[1];
+                                var tzo = tzs * ((tzh * 3600) + (tzm * 60));
+                                var local = new Date(date + "T" + time + tz);
+                                var utc = new Date(local.getTime() - tzo * 1000);
+                                document.getElementById("utc").innerHTML = utc.toISOString().split("T")[0] + "&nbsp;" + local.toUTCString().split(" ")[4];
+                            }
+                        </script>
                     </li>
                 </ul>
                 <script>
