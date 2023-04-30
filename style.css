@@ -349,6 +349,9 @@ hr {
     font-family: var(--mono);
     font-size: 0.8em;
 }
+.hide {
+    display: none;
+}
 mjx-container[display="true"] {
     text-align: left !important;
     padding-left: 40px !important;
