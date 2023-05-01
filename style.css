@@ -378,6 +378,9 @@ hr {
 .hide {
     display: none;
 }
+.big {
+    font-size: 10em;
+}
 mjx-container[display="true"] {
     text-align: left !important;
     padding-left: 40px !important;
