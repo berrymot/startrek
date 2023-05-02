@@ -298,22 +298,22 @@ div.links a {
     text-align: right;
     vertical-align: bottom;
     background-color: var(--frame);
-    color: var(--fg) !important;
-    text-decoration: none !important;
-    padding: 0.5rem 0.75rem !important;
+    color: var(--fg);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
     border-radius: 1rem;
 }
 div.links a.blue {
     background-color: var(--accentblue);
-    color: var(--fg) !important;
+    color: var(--fg);
     font-weight: bold;
 }
 div.links a.tworows {
-    padding: 0.25rem 0.75rem !important;
+    padding: 0.25rem 0.75rem;
     line-height: 0.8;
 }
 div.links a:hover {
-    background-color: var(--accentred) !important;
+    background-color: var(--accentred);
 }
 div.links ~ div.links {
     margin-top: 1rem;
