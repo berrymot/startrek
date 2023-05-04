@@ -448,7 +448,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
         width: calc(100% - 2rem);
         left: 2rem;
         top: -6rem;
-        height: 2rem;
+        height: 2.5rem;
     }
     div#radius {
         border-radius: 1rem 0 0 0;
@@ -471,7 +471,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
         height: 0;
     }
     div#content {
-        min-height: calc(100vh - 3rem);
+        min-height: calc(100vh - 3.5rem);
         border-radius: 0 0 0 1rem;
         position: relative;
         top: -5rem;
