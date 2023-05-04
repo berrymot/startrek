@@ -464,7 +464,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     }
     div#left-top a {
         min-height: 5rem;
-        top: 4rem;
+        top: 2.5rem;
         border-top: 1px solid var(--fg);
     }
     div#bottom, div#spacer {
