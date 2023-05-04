@@ -424,7 +424,7 @@ body#redalert::-webkit-scrollbar-thumb {
 body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top) {
     animation: redalert 2s infinite;
 }
-body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
+body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span) {
     animation: redalertbg 2s infinite;
 }
 @media (max-width: 1000px) {
@@ -504,7 +504,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
     body#redalert :is(div#frame, div#radius-container, div#left-top, div#bottom) {
         animation: redalert-light 2s infinite;
     }
-    body#redalert, body#redalert :is(div#spacer, div#radius, div#content) {
+    body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span) {
         animation: redalertbg-light 2s infinite;
     }
     @keyframes redalert-light {
