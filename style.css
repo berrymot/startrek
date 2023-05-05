@@ -437,10 +437,8 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
 }
 @media (max-width: 600px) {
     div#frame {
-        padding-left: 2rem;
         border-radius: 0 0 0 1.5rem;
-        padding-bottom: 1rem;
-        padding-top: 0;
+        padding: 0 0 1rem 2rem;
     }
     div#left-top, div#left-top * {
         width: 2rem;
