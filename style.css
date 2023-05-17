@@ -199,7 +199,9 @@ div#frame {
 div#spacer {
     height: 1em;
     background-color: var(--bg);
-    transition: height 0.25s cubic-bezier(0.23, 1, 0.32, 1), backgrouned-color 0.25s cubic-bezier(0.23, 1, 0.32, 1), margin-bottom 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    top: 0;
+    transition: height 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1), margin-bottom 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 div#content {
     position: relative;
@@ -443,8 +445,9 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
 }
 @media (max-width: 600px) {
     div#frame {
-        border-radius: 0 0 0 1.5rem;
-        padding: 0 0 1rem 2rem;
+        border-radius: 1.5 0 0 1.5rem;
+        padding: 1.5rem 0 2rem 1rem;
+        top: -9rem;
     }
     div#left-top, div#left-top * {
         width: 2rem;
@@ -468,17 +471,15 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
         top: 2.5rem;
         border-top: 1px solid var(--fg);
     }
-    div#bottom {
+    div#bottom, div#spacer {
         top: -9rem;
     }
     div#spacer {
-        height: 0;
+        margin-bottom: -9rem;
     }
     div#content {
-        min-height: calc(100vh - 2.5rem);
-        border-radius: 0 0 0 1rem;
-        top: -5rem;
-        margin-bottom: -5rem;
+        min-height: calc(100vh - 3.5rem);
+        border-radius: 1rem 0 0 1rem;
     }
     div#left-top {
         border-radius: 1.5rem 0 0 0;
