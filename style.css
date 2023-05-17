@@ -116,7 +116,7 @@ div#left-top {
 div#left-top a {
     text-decoration: none;
     display: block;
-    border-bottom: 1px solid var(--fg);
+    border-bottom: 1px solid var(--bg);
     text-align: right;
     padding: 0.125rem 0.25rem;
     user-select: none;
@@ -129,7 +129,7 @@ div#left-top a {
     top: 0;
     left: 0;
     overflow-wrap: break-word;
-    transition: min-height 0.25s cubic-bezier(0.23, 1, 0.32, 1), color 0.25s cubic-bezier(0.23, 1, 0.32, 1), width 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1), left 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: min-height 0.25s cubic-bezier(0.23, 1, 0.32, 1), color 0.25s cubic-bezier(0.23, 1, 0.32, 1), border 0.25s cubic-bezier(0.23, 1, 0.32, 1), width 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1), left 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 span.s {
     display: none;
@@ -471,7 +471,9 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
         min-height: 1.5rem;
         top: 9rem;
         left: 2rem;
-        border: none;
+        border-bottom: 0;
+        border-left: 1px solid var(--bg);
+        border-right: 1px solid var(--bg);
     }
     div#bottom, div#spacer {
         top: -9rem;
