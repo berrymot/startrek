@@ -127,8 +127,9 @@ div#left-top a {
     width: 100%;
     position: relative;
     top: 0;
+    left: 0;
     overflow-wrap: break-word;
-    transition: min-height 0.25s cubic-bezier(0.23, 1, 0.32, 1), color 0.25s cubic-bezier(0.23, 1, 0.32, 1), width 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: min-height 0.25s cubic-bezier(0.23, 1, 0.32, 1), color 0.25s cubic-bezier(0.23, 1, 0.32, 1), width 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1), left 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 span.s {
     display: none;
@@ -459,7 +460,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
         top: -9rem;
     }
     h1 {
-        left: 3rem;
+        left: 4rem;
         top: 0;
         font-size: 1.3rem;
     }
@@ -467,9 +468,10 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
         padding: 0 0.1rem;
     }
     div#left-top a {
-        min-height: 5rem;
-        top: 2.5rem;
-        border-top: 1px solid var(--fg);
+        min-height: 1.5rem;
+        top: 9rem;
+        left: 2rem;
+        border: none;
     }
     div#bottom, div#spacer {
         top: -9rem;
