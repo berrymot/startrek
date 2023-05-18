@@ -435,10 +435,10 @@ body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top) {
     animation: redalert 2s infinite;
 }
 body#redalert :is(div#radius-container, div#bottom, div#left-top) {
+    background-color: var(--accentred);
     animation-delay: 0.25s !important;
 }
 body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span) {
-    background-color: var(--accentred);
     animation: redalertbg 2s infinite;
 }
 @media (max-width: 1000px) {
