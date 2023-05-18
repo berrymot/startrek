@@ -515,6 +515,9 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
     body#redalert :is(div#frame, div#radius-container, div#left-top, div#bottom) {
         animation: redalert-light 2s infinite;
     }
+    body#redalert :is(div#radius-container, div#left-top, div#bottom) {
+        background-color: var(--frame);
+    }
     body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span) {
         animation: redalertbg-light 2s infinite;
     }
