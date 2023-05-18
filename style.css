@@ -434,6 +434,9 @@ body#redalert::-webkit-scrollbar-thumb {
 body#redalert :is(div#frame, div#radius-container, div#bottom, div#left-top) {
     animation: redalert 2s infinite;
 }
+body#redalert :is(div#radius-container, div#bottom, div#left-top) {
+    animation-delay: 0.25s !important;
+}
 body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span) {
     animation: redalertbg 2s infinite;
 }
