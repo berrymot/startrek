@@ -62,11 +62,12 @@
 /* stuff */
 :root {
     --bg: #10191f;
-    --xbg: #103147;
+    --xbg: #104568;
     --fg: #ffffff;
     --accentred: #ff3151;
     --accentblue: #30b5e6;
     --accentgreen: #12d799;
+    --xred: #882538;
     --frame: #1070b0;
     --focus: #bee037;
     --sans: "Alegreya Sans", "Noto Sans", sans-serif;
@@ -215,7 +216,7 @@ div#content {
     transition: min-height 0.25s cubic-bezier(0.23, 1, 0.32, 1), border-radius 0.25s cubic-bezier(0.23, 1, 0.32, 1), top 0.25s cubic-bezier(0.23, 1, 0.32, 1), margin 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 code, pre {
-    background-color: var(--frame);
+    background-color: var(--xbg);
     padding: 0.125rem;
     border-radius: 0.25rem;
     font-family: var(--mono);
@@ -227,11 +228,14 @@ pre {
     scrollbar-width: none;
 }
 pre mark {
-    background-color: var(--accentred);
+    background-color: var(--frame);
     color: var(--fg);
 }
 a {
     color: var(--accentblue);
+}
+a:hover {
+    background-color: var(--xbg);
 }
 strong, em {
     color: var(--focus);
@@ -317,11 +321,12 @@ div.links a {
     height: 2rem;
     text-align: right;
     vertical-align: bottom;
-    background-color: var(--frame);
-    color: var(--fg);
+    background-color: var(--xbg);
+    color: var(--frame);
     text-decoration: none;
     padding: 0.5rem 0.75rem;
     border-radius: 1rem;
+    border-bottom: 2px solid currentColor;
 }
 div.links a.blue {
     background-color: var(--accentblue);
@@ -333,7 +338,8 @@ div.links a.tworows {
     line-height: 0.8;
 }
 div.links a:hover {
-    background-color: var(--accentred);
+    background-color: var(--frame);
+    color: var(--fg);
 }
 div.links ~ div.links {
     margin-top: 1rem;
@@ -341,7 +347,7 @@ div.links ~ div.links {
 input, button, textarea, select, option {
     appearance: none;
     background-color: var(--bg);
-    border: 1px solid currentcolor;
+    border: 1px solid currentColor;
     border-radius: 0.25rem;
     color: var(--fg);
     padding: 0.25rem 0.5rem;
@@ -360,6 +366,7 @@ button {
     cursor: pointer;
     color: var(--accentblue);
     font-weight: bold;
+    background-color: var(--xbg);
 }
 [disabled] {
     opacity: 0.5;
@@ -368,6 +375,7 @@ button {
 :invalid {
     color: var(--accentred);
     font-weight: bold;
+    background-color: var(--xred);
 }
 ul {
     list-style-type: disc;
@@ -508,11 +516,12 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
         --accentred: #ce2029;
         --accentblue: #2c70de;
         --accentgreen: #068c59;
+        --xred: #e48e94;
     }
     ::selection {
         background-color: #e6b87760;
     }
-    div#left-top a, th:not(.subhead), div.links a:hover {
+    div#left-top a, th:not(.subhead) {
         color: var(--bg);
     }
     body#redalert :is(div#frame, div#radius-container, div#left-top, div#bottom) {
@@ -526,13 +535,13 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
     }
     @keyframes redalert-light {
         0% {
-            background: var(--frame);
+            background: var(--xred);
         }
         50% {
             background: var(--accentred);
         }
         100% {
-            background: var(--frame);
+            background: var(--xred);
         }
     }
     @keyframes redalertbg-light {
