@@ -292,6 +292,9 @@ th, td {
     vertical-align: baseline;
     white-space: nowrap;
 }
+table.wrap :is(th, td) {
+    white-space: normal;
+}
 th {
     font-weight: bold;
     background-color: var(--accentred);
