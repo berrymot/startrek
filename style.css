@@ -67,7 +67,7 @@
     --accentred: #ff3151;
     --accentblue: #30b5e6;
     --accentgreen: #12d799;
-    --xred: #882538;
+    --xred: #4c1f2c;
     --frame: #1070b0;
     --focus: #bee037;
     --sans: "Alegreya Sans", "Noto Sans", sans-serif;
@@ -322,11 +322,12 @@ div.links a {
     text-align: right;
     vertical-align: bottom;
     background-color: var(--xbg);
-    color: var(--frame);
+    color: var(--accentblue);
     text-decoration: none;
     padding: 0.5rem 0.75rem;
     border-radius: 1rem;
     border-bottom: 2px solid currentColor;
+    box-sizing: content-box;
 }
 div.links a.blue {
     background-color: var(--accentblue);
@@ -516,7 +517,7 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
         --accentred: #ce2029;
         --accentblue: #2c70de;
         --accentgreen: #068c59;
-        --xred: #e48e94;
+        --xred: #eec5c9;
     }
     ::selection {
         background-color: #e6b87760;
@@ -535,13 +536,13 @@ body#redalert, body#redalert :is(div#spacer, div#radius, div#content, h1 > span)
     }
     @keyframes redalert-light {
         0% {
-            background: var(--xred);
+            background: var(--frame);
         }
         50% {
             background: var(--accentred);
         }
         100% {
-            background: var(--xred);
+            background: var(--frame);
         }
     }
     @keyframes redalertbg-light {
