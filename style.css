@@ -326,12 +326,6 @@ div.links a {
     text-decoration: none;
     padding: 0.5rem 0.75rem;
     border-radius: 1rem;
-    border-bottom: 2px solid currentColor;
-}
-div.links a.blue {
-    background-color: var(--accentblue);
-    color: var(--fg);
-    font-weight: bold;
 }
 div.links a.tworows {
     padding: 0.25rem 0.75rem;
