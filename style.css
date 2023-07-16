@@ -327,7 +327,6 @@ div.links a {
     padding: 0.5rem 0.75rem;
     border-radius: 1rem;
     border-bottom: 2px solid currentColor;
-    box-sizing: content-box;
 }
 div.links a.blue {
     background-color: var(--accentblue);
