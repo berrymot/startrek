@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>LCARS</title>
+        <link href="/_css/col.css" rel="stylesheet" />
+        <link href="/_css/lcars.css" rel="stylesheet" />
+        <meta charset="utf-8" />
+        <style>
+        </style>
+    </head>
+    <body>
+        <div id="head">
+            <a href="/index.html" class="b-b6">INDEX</a
+            ><a href="/e/index.html">CANON</a
+            ><a href="/n/index.html">NOVELS</a>
+        </div>
+        <div id="foot"></div>
+        <div id="corners"><div id="inner"></div></div>
+        <div id="side">
+            <a href="/changelog.html">CHANGELOG</a>
+            <a href="/stardate.html" class="b-b3">STARDATE</a>
+            <a href="/future.html">FUTURE</a>
+        </div>
+        <div id="content">
+            <h1>Stardate converter</h1>
+            <h2><span>From stardate</span></h2>
+            <p>Enter a TNG-or-later (usually five- or six-digit) stardate to convert it to a UTC date</p>
+            <p>
+                <input type="number" id="stardate" step="0.1" placeholder="41153.7" />
+                <button onclick="from()">Convert</button>
+            </p>
+            <p><strong id="from-res"></strong></p>
+            <h2><span>To stardate</span></h2>
+            <p>Enter a UTC date to convert it to a stardate</p>
+            <p>
+                <input type="date" id="date" />
+                <input type="time" id="time" step="1" />
+                <button onclick="to()">Convert</button>
+            </p>
+            <p><strong id="to-res"></strong></p>
+        </div>
+        <script>
+            function gcd(a, b) {
+                if (!b) {return a;}
+                return gcd(b, a % b);
+            }
+            function ly(year) {
+                return gcd(80, year) > gcd(50, year);
+            }
+            function pad(n) {
+                return n.toString().padStart(2, "0");
+            }
+            function from() {
+                let sd = +document.getElementById("stardate").value;
+                let frac = sd/1000 + 2323;
+                let year = Math.floor(frac);
+                let rest = frac % 1;
+                let ndays = ly(year) ? 366 : 365;
+                let dayn = Math.floor(rest * ndays);
+                let mstarts = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+                if (ly(year)) {
+                    for (let i = 2; i < mstarts.length; i++) {
+                        mstarts[i]++;
+                    }
+                }
+                let month = 0;
+                for (let i = 11; i >= 0; i--) {
+                    if (dayn >= mstarts[i]) {
+                        month = i;
+                        break;
+                    }
+                }
+                let day = dayn - mstarts[month] + 1;
+                let time = (rest * ndays) % 1;
+                let hours = Math.floor(time * 24);
+                let minutes = Math.floor((time * 24 * 60) % 60);
+                let seconds = Math.floor((time * 24 * 3600) % 60);
+                let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                let result = months[month] + " " + day + ", " + year + " at " + pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
+                document.getElementById("from-res").innerHTML = result;
+            }
+            function to() {
+                let date = document.getElementById("date").value;
+                let time = document.getElementById("time").value;
+                let [year, month, day] = date.split('-').map(Number);
+                let [hours, minutes, seconds] = time.split(':').map(Number);
+                let mstarts = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+                if (ly(year)) {
+                    for (let i = 2; i < mstarts.length; i++) {
+                        mstarts[i]++;
+                    }
+                }
+                let dayn = mstarts[month - 1] + day - 1;
+                let ndays = ly(year) ? 366 : 365;
+                let dayf = dayn + (hours + minutes/60 + seconds/3600) / 24;
+                let rest = dayf/ndays;
+                let stardate = (year - 2323 + rest) * 1000;
+                document.getElementById("to-res").innerHTML = stardate.toFixed(5);
+            }
+        </script>
+    </body>
+</html>
