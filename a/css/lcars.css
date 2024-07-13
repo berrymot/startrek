@@ -131,6 +131,7 @@ del {
 }
 code, pre {
     color: var(--b8);
+    font-family: "Iosevka";
 }
 h2 {
     background-color: var(--b5);

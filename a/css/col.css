@@ -1,45 +1,65 @@
 /* fonts */
 @font-face {
     font-family: "Noto Sans";
-    src: url("../_fonts/NotoSans-Regular.ttf");
+    src: url("../fonts/NotoSans-Regular.ttf");
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("../_fonts/NotoSans-Italic.ttf");
+    src: url("../fonts/NotoSans-Italic.ttf");
     font-style: italic;
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("../_fonts/NotoSans-Bold.ttf");
+    src: url("../fonts/NotoSans-Bold.ttf");
     font-weight: 700;
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("../_fonts/NotoSans-BoldItalic.ttf");
+    src: url("../fonts/NotoSans-BoldItalic.ttf");
     font-weight: 700;
     font-style: italic;
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("../_fonts/NotoSans-Condensed.ttf");
+    src: url("../fonts/NotoSans-Condensed.ttf");
     font-stretch: 62.5%;
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("../_fonts/NotoSans-CondensedItalic.ttf");
+    src: url("../fonts/NotoSans-CondensedItalic.ttf");
     font-stretch: 62.5%;
     font-style: italic;
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("../_fonts/NotoSans-CondensedBold.ttf");
+    src: url("../fonts/NotoSans-CondensedBold.ttf");
     font-stretch: 62.5%;
     font-weight: 700;
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("../_fonts/NotoSans-CondensedBoldItalic.ttf");
+    src: url("../fonts/NotoSans-CondensedBoldItalic.ttf");
     font-stretch: 62.5%;
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Iosevka";
+    src: url("../fonts/Iosevka-Regular.ttf");
+}
+@font-face {
+    font-family: "Iosevka";
+    src: url("../fonts/Iosevka-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "Iosevka";
+    src: url("../fonts/Iosevka-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Iosevka";
+    src: url("../fonts/Iosevka-BoldItalic.ttf");
     font-weight: 700;
     font-style: italic;
 }
