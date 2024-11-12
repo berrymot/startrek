@@ -129,6 +129,9 @@ del {
     text-decoration: none;
     color: var(--b23);
 }
+rt {
+    font-style: normal !important;
+}
 code, pre {
     color: var(--b8);
     font-family: "Iosevka";
