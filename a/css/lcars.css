@@ -193,6 +193,9 @@ th.sub {
 .r-br {
     border-bottom-right-radius: 0.5lh;
 }
+.group {
+    border-left: 3px solid var(--b2);
+}
 /* td:has(a.btn) {
     padding: 0;
 }
