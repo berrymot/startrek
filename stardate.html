@@ -25,7 +25,7 @@
         <div id="content">
             <h1>Stardate converter</h1>
             <h2><span>From stardate</span></h2>
-            <p>Enter a TNG-or-later (usually five- or six-digit) stardate to convert it to a UTC date</p>
+            <p>Enter a five- or six-digit, non-TOS-era stardate to convert it to a UTC date. Beware the stardate system has been changed somehow for LD and seemingly anything after it (32nd century DIS etc.), so this will diagree with the new system. I can't find any explanation of what the changes made were exactly.</p>
             <p>
                 <input type="number" id="stardate" step="0.1" placeholder="41153.7" />
                 <button onclick="from()">Convert</button>
@@ -36,7 +36,6 @@
             <p>
                 <input type="date" id="date" />
                 <input type="time" id="time" step="1" />
-        <meta name="format-detection" content="telephone=no,email=no,address=no,date=no" />
                 <button onclick="to()">Convert</button>
             </p>
             <p><strong id="to-res"></strong></p>
